@@ -1,0 +1,12 @@
+.commit2 {
+  position: relative;
+}
+
+#canvas1 {
+  position: absolute;
+  z-index: 3;
+}
+#canvas2 {
+  position: absolute;
+  z-index: 2;
+}
