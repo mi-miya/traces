@@ -1,12 +1,116 @@
-.commit2 {
-  position: relative;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-#canvas1 {
-  position: absolute;
-  z-index: 3;
+#wrap {
+  padding-top: 70px;
 }
-#canvas2 {
-  position: absolute;
-  z-index: 2;
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: #9e0f0f;
+  color: #ffffff;
+  text-align: center;
+}
+header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+header h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  font-weight: normal;
+}
+header p {
+  font-size: 10px;
+}
+
+.header-image {
+  height: 40vw;
+  background-image: url('https://placehold.jp/800x400.png');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: #8b8b8b;
+}
+
+section.campaigns-description {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+section.campaigns-description > h2 {
+  margin: 15px 0;
+  color: #9e0f0f;
+  font-size: 26px;
+}
+section.campaigns-description > p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+article {
+  padding: 60px 0;
+  background-color: #d4cce0;
+}
+section.comic-area {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+section.comic-area > div {
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+}
+section.comic-area img {
+  max-width: 100%;
+}
+section.comic-area canvas {
+  max-width: 100%;
+}
+
+section.comic-after {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+section.comic-after > h2 {
+  font-size: 30px;
+  text-align: center;
+}
+section.comic-after > p {
+  margin: 20px 0;
+  font-size: 18px;
+  line-height: 36px;
+}
+#onemore {
+  padding: 20px 0;
+  background-color: #b61747;
+  text-align: center;
+  border-radius: 10px;
+  cursor : pointer;
+}
+#onemore > span {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+footer {
+  text-align: center;
+  background-color: #3a3a3a;
+}
+footer > p {
+  color: #ffffff;
+  font-size: 12px;
 }

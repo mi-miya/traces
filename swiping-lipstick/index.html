@@ -7,20 +7,28 @@
   <title>Swiping Lipstick</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+  <script>
+    if(window.innerWidth < 750) {
+      alert('当ページはスマートフォンの画面や、750px以下の画面には対応していません。');
+    }
+  </script>
 </head>
 <body style="background-color: white;">
 <div id="wrap">
 
 <header>
-  <h1>Kuchibeni</h1>
-  <p>化粧品系キャンペーンサイトサイトトレース</p>
+  <a href="https://mi-miya.github.io/traces/">
+    <h1>KUCHIBENI</h1>
+    <p>化粧品系キャンペーンサイトサイトトレース&hearts;</p>
+  </a>
 </header>
 
-<img src="https://placehold.jp/1000x400.png">
+<div class="header-image"></div>
 
 <section class="campaigns-description">
   <h2>
-    画像内の特定の位置をスワイプすると、<br>
+    画像をスワイプすると、<br>
     色が変わる！
   </h2>
   <p>
@@ -30,26 +38,33 @@
 </section>
 
 <article>
-  <div class="commit1">
-    <img src="https://placehold.jp/750x1066.png" alt="commit1">
-    <!-- <img src="https://placehold.jp/750x1066.png" alt="commit1">
-    <img src="https://placehold.jp/750x1066.png" alt="commit1"> -->
-  </div>
-  <div class="commit2">
-    <canvas id="canvas1" id="swipeCanvas" width="750px" height="1500px"></canvas>
-    <canvas id="canvas2" id="swipeCanvas" width="750px" height="1500px" style="background-color: blue;"></canvas class="canvas2">
-  </div>
-  <div class="commit3">
-    <img src="https://placehold.jp/750x1066.png" alt="commit1">
-    <!-- <img src="https://placehold.jp/750x1066.png" alt="commit1">
-    <img src="https://placehold.jp/750x1066.png" alt="commit1"> -->
-  </div>
+  <section class="comic-area">
+    <div class="comic1">
+      <img class="img1" src="dummy.png" alt="comic1">
+      <img class="img2" src="comic2.png" alt="comic1">
+    </div>
+    <div class="comic2">
+      <canvas id="swipeCanvas" width="750px" height="1500px"></canvas>
+    </div>
+    <div class="comic3">
+      <img class="img2" src="comic2.png" alt="comic3">
+    </div>
+  </section>
 
-  <div>
-    <h2>もう二回スワイプ出来ます</h2>
-    <!-- <h2>もう一回スワイプ出来ます</h2> -->
-  </div>
+  <section class="comic-after img2">
+    <h2>スワイプ完了！！</h2>
+    <p>
+      スワイプすることで、スワイプ範囲の色情報を随時書き換えています。
+    </p>
+    <div id="onemore">
+      <span>もう一回試す</span>
+    </div>
+  </section>
 </article>
+
+<footer>
+  <p>2020&copy;Misato Miyahara</p>
+</footer>
 
 </div>
 </body>

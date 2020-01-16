@@ -1,11 +1,9 @@
 $(function() {
-  let canvas = $('#canvas1')[0];
+  let canvas = $('#swipeCanvas')[0];
   let context = canvas.getContext('2d');
-  context.fillStyle = "red";
-  context.fillRect(0, 0, canvas.width, canvas.height);
   // スワイプするエリアの図形サイズ
-  const SWIPE_AREA_WIDTH = 170;
-  const SWIPE_AREA_HEIGHT = 60;
+  const SWIPE_AREA_WIDTH = 200;
+  const SWIPE_AREA_HEIGHT = 80;
   // スワイプエリアの左上座標
   const SWIPE_AREA_MIN = {
     x: (canvas.width - SWIPE_AREA_WIDTH) / 2,
@@ -18,35 +16,57 @@ $(function() {
   };
   let tapStartX = 0;
   let tapFlug = false;
-  let radius = 0;
 
-  context.strokeRect(
-    SWIPE_AREA_MIN.x,
-    SWIPE_AREA_MIN.y,
-    SWIPE_AREA_WIDTH,
-    SWIPE_AREA_HEIGHT
-  );
+  let drawCanvasData = context.getImageData(0, 0, canvas.width, canvas.height);
+  let drawCanvasArray = drawCanvasData.data;
+  let canvasImage = new Image();
+  let canvasImageData;
+  let canvasImageArray;
+  canvasImage.src = 'comic2.png';
+  let rootImage = new Image();
+  let rootImageData;
+  let rootImageArray;
+  rootImage.src = 'dummy.png';
+  let radius = _radius = 0;
+  let x = canvas.width / 2;
+  let y = canvas.height / 2;
+  let startTime;
 
-  let mouseMoveEvent = function(event) {
-    if(checkVlidPoint()){
-      tapEndXY = {x: event.offsetX, y: event.offsetY};
-      radius = Math.abs(tapStartX - event.offsetX);
-      drawCircle();
-    }
-  };
-  canvas.addEventListener('mousedown', function(event){
-    if(checkVlidPoint()){
-      tapFlug = true;
-      tapStartX = event.offsetX;
-      canvas.addEventListener('mousemove', mouseMoveEvent);
-    }
-  });
-  window.addEventListener("mouseup",function(e) {
-    if(tapFlug) {
-      canvas.removeEventListener('mousemove', mouseMoveEvent);
-      tapFlug = false;
-    }
-  });
+  canvasImage.onload = () => {
+    context.drawImage(canvasImage, 0, 0);
+    canvasImageData = context.getImageData(0, 0, canvas.width, canvas.height);
+    canvasImageArray = canvasImageData.data;
+    console.info('Canvas image loaded.');
+  }
+
+  rootImage.onload = () => {
+    context.drawImage(rootImage, 0, 0);
+    rootImageData = context.getImageData(0, 0, canvas.width, canvas.height);
+    rootImageArray = rootImageData.data;
+    console.info('Root image loaded.');
+    initJS();
+  }
+
+  function initJS() {
+    drawTapArea();
+    $('canvas').css('background-image', 'url("dummy.png")');
+    imageHidden('.img2');
+  }
+
+  function checkInsideCircle(cx, cy, r) {
+    return Math.pow((cx - x), 2) + Math.pow((cy - y), 2) - Math.pow(r, 2) <= 0;
+  }
+
+  function drawTapArea() {
+    context.beginPath();
+    context.strokeRect(
+      SWIPE_AREA_MIN.x,
+      SWIPE_AREA_MIN.y,
+      SWIPE_AREA_WIDTH,
+      SWIPE_AREA_HEIGHT
+    )
+    context.stroke();
+  }
 
   function checkVlidPoint() {
     return SWIPE_AREA_MIN.x < event.offsetX &&
@@ -55,28 +75,111 @@ $(function() {
       SWIPE_AREA_MAX.y > event.offsetY;
   }
 
-  function drawCircle() {
-    // fill
-    context.globalAlpha = 1.0;
-    context.beginPath ();
-    context.globalCompositeOperation = 'destination-out';
-    context.arc(100, 100, radius, 0 * Math.PI / 180, 360 * Math.PI / 180, false);
-    context.fill();
-    // stroke
-    context.globalCompositeOperation = 'source-over';
-    context.beginPath ();
-    context.lineWidth = 2.5;
-    context.strokeStyle = "#ffffff";
-    context.globalAlpha = 1.0;
-    var radiusDummy = radius;
-    while(0 < context.globalAlpha && 0 < radiusDummy){
-      context.beginPath ();
-      context.arc(100, 100, radiusDummy, 0 * Math.PI / 180, 360 * Math.PI / 180, false);
-      radiusDummy -= context.lineWidth;
-      context.globalAlpha = context.globalAlpha - 0.15;
-      context.stroke();
+  function enlargeCircle() {
+    for(var cy = (y - radius); cy <= (y + radius); cy++) {
+      for(var cx = (x - radius); cx <= (x + radius); cx++) {
+        if(checkInsideCircle(cx, cy, radius)) {
+          if(cx < 0 || cy < 0) {
+            continue;
+          }
+          let index = (canvas.width * cy + cx) * 4;
+          drawCanvasArray[index] = canvasImageArray[index];
+          drawCanvasArray[index+1] = canvasImageArray[index+1];
+          drawCanvasArray[index+2] = canvasImageArray[index+2];
+          drawCanvasArray[index+3] = 255;
+        }
+      }
+    }
+    context.putImageData(drawCanvasData, 0, 0);
+    drawTapArea();
+  }
+
+  function shrinkCircle() {
+    for(var cy = (y - _radius); cy <= (y + _radius); cy++) {
+      for(var cx = (x - _radius); cx <= (x + _radius); cx++) {
+        if(!checkInsideCircle(cx, cy, radius)) {
+          let index = (canvas.width * cy + cx) * 4;
+          drawCanvasArray[index] = rootImageArray[index];
+          drawCanvasArray[index+1] = rootImageArray[index+1];
+          drawCanvasArray[index+2] = rootImageArray[index+2];
+          drawCanvasArray[index+3] = 255;
+        }
+      }
+    }
+    context.putImageData(drawCanvasData, 0, 0);
+    drawTapArea();
+  }
+
+  function enlargeAnimationCircle() {
+    let requestId = window.requestAnimationFrame(enlargeAnimationCircle);
+    enlargeCircle();
+    if(radius > 860) {
+      window.cancelAnimationFrame(requestId);
+      console.log("拡大完了:", Date.now() - startTime);
+      imageHidden('.img1');
+    }
+    radius += 30;
+  }
+
+  function shrinkAnimationCircle() {
+    let requestId = window.requestAnimationFrame(shrinkAnimationCircle);
+    if(radius < 0) {
+      radius = 0;
+    }
+    shrinkCircle();
+    if(radius == 0) {
+      window.cancelAnimationFrame(requestId);
+      console.log("縮小完了:", Date.now() - startTime);
+    }
+    _radius = radius;
+    radius -= 10;
+  }
+
+  function imageHidden(cls) {
+    $(cls).css('display', 'none');
+    switch (cls) {
+      case '.img1':
+        $('.img2').css('display', 'block');
+        break;
+      case '.img2':
+        $('.img1').css('display', 'block');
     }
   }
-})
 
-// TODO: jQueryは不要のため削除
+  $('#onemore').on('click', function() {
+    window.location.reload(false);
+  })
+
+  let mouseMoveEvent = function(event) {
+    // TODO:高速で動かすときに、インターバルを設ける 
+    if(checkVlidPoint()){
+      radius = Math.abs(tapStartX - event.offsetX);
+      if(radius > _radius) {
+        enlargeCircle();
+      } else if(radius < _radius) {
+        shrinkCircle();
+      }
+      _radius = radius;
+    }
+  };
+  $('#swipeCanvas').mousedown(function(e) {
+    radius = _radius = 0;
+    if(checkVlidPoint()){
+      tapFlug = true;
+      tapStartX = event.offsetX;
+      canvas.addEventListener('mousemove', mouseMoveEvent);
+    }
+  });
+  $(window).mouseup(function(e) {
+    if(tapFlug) {
+      canvas.removeEventListener('mousemove', mouseMoveEvent);
+      startTime = Date.now();
+      if(radius > 140) {
+        enlargeAnimationCircle();
+      } else {
+        shrinkAnimationCircle();
+      }
+      tapFlug = false;
+    }
+  });
+})
