@@ -2,8 +2,8 @@ $(function() {
   let canvas = $('#swipeCanvas')[0];
   let context = canvas.getContext('2d');
   // スワイプするエリアの図形サイズ
-  const SWIPE_AREA_WIDTH = 200;
-  const SWIPE_AREA_HEIGHT = 80;
+  const SWIPE_AREA_WIDTH = 180;
+  const SWIPE_AREA_HEIGHT = 60;
   // スワイプエリアの左上座標
   const SWIPE_AREA_MIN = {
     x: (canvas.width - SWIPE_AREA_WIDTH) / 2,
@@ -22,11 +22,11 @@ $(function() {
   let canvasImage = new Image();
   let canvasImageData;
   let canvasImageArray;
-  canvasImage.src = 'comic2.png';
+  canvasImage.src = 'image2.png';
   let rootImage = new Image();
   let rootImageData;
   let rootImageArray;
-  rootImage.src = 'dummy.png';
+  rootImage.src = 'image1.png';
   let radius = _radius = 0;
   let x = canvas.width / 2;
   let y = canvas.height / 2;
@@ -49,7 +49,7 @@ $(function() {
 
   function initJS() {
     drawTapArea();
-    $('canvas').css('background-image', 'url("dummy.png")');
+    $('canvas').css('background-image', 'url("image1.png")');
     imageHidden('.img2');
   }
 
@@ -113,9 +113,8 @@ $(function() {
   function enlargeAnimationCircle() {
     let requestId = window.requestAnimationFrame(enlargeAnimationCircle);
     enlargeCircle();
-    if(radius > 860) {
+    if(radius > 620) {
       window.cancelAnimationFrame(requestId);
-      console.log("拡大完了:", Date.now() - startTime);
       imageHidden('.img1');
     }
     radius += 30;
@@ -129,7 +128,6 @@ $(function() {
     shrinkCircle();
     if(radius == 0) {
       window.cancelAnimationFrame(requestId);
-      console.log("縮小完了:", Date.now() - startTime);
     }
     _radius = radius;
     radius -= 10;
