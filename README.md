@@ -1,1 +1,1 @@
-https://mi-miya.github.io/traces/
+https://mi-miya.github.io/traces/index.html
