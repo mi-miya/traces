@@ -1,0 +1,50 @@
+// Variable
+$pc: 770px; // break point
+$header_height: 100;
+$theme_color: #fcfc02;
+
+// Function
+@mixin media($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@keyframes fadeinText {
+  0% {width: 0;}
+  100% {width: 100%;}
+}
+
+// Common
+* {
+  margin: 0;
+  padding: 0;
+  cursor: none !important;
+}
+
+body {
+  min-width: 320px;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.pc_only {
+  display: none;
+  @include media($pc) {
+    display: block;
+  }
+}
+
+.sp_only {
+  @include media($pc) {
+    display: none;
+  }
+}
