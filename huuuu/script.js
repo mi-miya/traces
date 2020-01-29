@@ -3,7 +3,7 @@ let timeoutId = 0;
 let scrolls = [];
 let minShakeAngle = 0.3; // 最小振れ角
 let attenuation = 0.8; // 振幅減衰率
-let defaultAngle = 45; // 基準振れ角
+let defaultAngle = 40; // 基準振れ角
 
 window.onload = () => {
   oldPos = window.scrollY;
