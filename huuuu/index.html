@@ -1,19 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>trace huuuu</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.min.css">
 </head>
-<body style="height: 200vh; width: 100vw;">
-  <div class="shakes" style="background-color: pink; width: 200px; height: 100px;margin: 150px;"></div>
-  <div class="shakes" style="background-color: pink; width: 200px; height: 100px;margin: 150px;"></div>
-  <div class="shakes" style="background-color: pink; width: 200px; height: 100px;margin: 150px;"></div>
-  <div class="shakes" style="background-color: pink; width: 200px; height: 100px;margin: 150px;"></div>
-  <div class="shakes" style="background-color: pink; width: 200px; height: 100px;margin: 150px;"></div>
-  <div class="shakes" style="background-color: pink; width: 200px; height: 100px;margin: 150px;"></div>
-  <script src="script.js"></script>
+<body>
+<div class="wrapper">
+  <header class="pcOnly">
+    <a class="logo" href="#">
+      <img src="https://placehold.jp/60x52.png" alt="huuuu">
+    </a>
+    <ul class="nav">
+      <li class="shakes"><a href="#">Huuuuとは<br><span>ABOUT</span></a></li>
+      <li class="shakes"><a href="#">実績一覧<br><span>WORKS</span></a></li class="shakes">
+      <li class="shakes"><a href="#">事業一覧<br><span>SERVICE</span></a></li>
+      <li class="shakes"><a href="#">お問い合わせ<br><span>CONTACT</span></a></li>
+    </ul>
+  </header>
+  <div class="top_image">
+    <a class="shakes" href="#">
+      <img src="https://placehold.jp/220x136.png" alt="huuuu">
+    </a>
+  </div>
+  <div class="contents">
+    文字がスクロールする処理は時間の関係上保留
+  </div>
+  <main>
+    <section class="news">
+      <h2>新着実績<br><span>WORKS</span></h2>
+      <ul>
+        <li>
+          <a class="news-img">
+            <img src="https://placehold.jp/300x170.png">
+          </a>
+          <div class="news-main">
+            <p class="news-date">2019.11.29</p>
+            <div class="news-text">
+              <h3><a href="#">ニュースタイトル</a></h3>
+              <p>ニュース本文。ニュース本文。ニュース本文。ニュース本文。ニュース本文。ニュース本文。ニュース本文。</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <a href="#">
+      <img src="https://placehold.jp/60x52.png" alt="huuuu">
+    </a>
+  </footer>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

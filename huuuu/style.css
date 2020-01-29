@@ -1,4 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.pcOnly {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .pcOnly {
+    display: block;
+  }
+}
+
 .shakes {
-  /* transition: transform 500ms ease-in-out; */
   transform-origin: 50% 0;
+}
+
+.top_image {
+  width: 100vw;
+  height: 80vw;
+  background-image: url("https://placehold.jp/1000x800.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative;
+}
+
+.top_image a {
+  width: 30%;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, auto);
+}
+
+.top_image a img {
+  width: 100%;
+}
+
+.contents {
+  width: 100%;
+  height: 300px;
+  background-color: #e6e6e6;
+}
+
+main .news {
+  padding: 25px 10px;
+}
+
+main .news h2 {
+  margin: 0 0 15px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+main .news h2 span {
+  font-size: 15px;
+  line-height: 15px;
+  font-style: italic;
+}
+
+main .news ul li {
+  display: flex;
+}
+
+main .news ul li .news-img {
+  height: 120px;
+  flex-basis: 120px;
+  display: inline-block;
+}
+
+main .news ul li .news-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main .news ul li .news-main {
+  flex-basis: auto;
+  overflow: hidden;
 }
