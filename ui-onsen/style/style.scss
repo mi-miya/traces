@@ -1,0 +1,239 @@
+@import 'common.scss';
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding: 40px 0 0;
+  box-sizing: border-box;
+  @include media($pc) {
+    height: auto;
+  }
+}
+
+#bg {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/bg_img1.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  transition: background-image 0.7s;
+}
+
+.top {
+  text-align: center;
+  .title {
+    @include google-font();
+    user-select: none;
+    h1 {
+      font-size: 65px;
+      font-weight: lighter;
+      @include media($pc) {
+        font-size: 160px;
+      }
+    }
+    p {
+      letter-spacing: 4px;
+      font-size: 20px;
+      @include media($pc) {
+        font-size: 45px;
+      }
+    }
+  }
+  .entry {
+    padding-top: 30px;
+    @include media($pc) {
+      padding-top: 60px;
+    }
+    .entry-btn {
+      margin: 0 2px;
+      padding: 5px 25px;
+      font-size: 22px;
+      font-style: italic;
+      font-weight: bold;
+      background-color: #fff;
+      vertical-align: top;
+      display: inline-block;
+      @include media($pc) {
+        margin: 0 5px;
+        padding: 10px 50px;
+        font-size: 34px;
+      }
+      span {
+        font-size: 16px;
+        @include media($pc) {
+          font-size: 24px;
+        }
+      }
+    }
+    .otoko {
+      color: #36A1E8;
+    }
+    .onna {
+      color: #F54C28;
+    }
+  }
+  .top-arrow {
+    margin: 20px 0;
+    font-size: 30px;
+    user-select: none;
+    @include media($pc) {
+      margin: 60px 0;
+      font-size: 60px;
+    }
+  }
+}
+.what {
+  max-width: 300px;
+  margin: 0 auto;
+  @include media($pc) {
+    max-width: 600px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 5px;
+    user-select: none;
+    @include google-font();
+    @include media($pc) {
+      margin-bottom: 20px;
+      font-size: 55px;
+      text-align: left;
+      letter-spacing: 14px;
+    }
+  }
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    @include media($pc) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+section {
+  max-width: 300px;
+  margin: 0 auto;
+  @include media($pc) {
+    max-width: 600px;
+  }
+  h2 {
+    user-select: none;
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center;
+    @include media($pc) {
+      font-size: 32px;
+      letter-spacing: 4px;
+    }
+  }
+}
+.speakers {
+  padding: 40px 0;
+  .speaker-list {
+    li {
+      padding: 20px 0;
+      @include media($pc) {
+        padding: 30px 0;
+      }
+      .speaker-name {
+        margin-bottom: 14px;
+        display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        @include media($pc) {
+          margin-bottom: 24px;
+        }
+        img {
+          width: 90px;
+          height: 90px;
+          border-radius: 45px;
+          @include media($pc) {
+            width: 180px;
+            height: 180px;
+            border-radius: 90px;
+          }
+        }
+        .name {
+          padding-left: 14px;
+          @include media($pc) {
+            padding-left: 24px;
+          }
+          p {
+            font-size: 14px;
+            font-style: italic;
+            @include media($pc) {
+              font-size: 22px;
+              font-weight: bold;
+            }
+          }
+          h3 {
+            font-size: 34px;
+            @include media($pc) {
+              font-size: 62px;
+            }
+          }
+        }
+      }
+      .speaker-profile {
+        font-size: 13px;
+        @include media($pc) {
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+.program {
+  user-select: none;
+  table {
+    margin: 15px auto;
+    padding: 40px 30px;
+    text-align: left;
+    background-image: url('https://placehold.jp/250x220.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    @include media($pc) {
+      width: 100%;
+      margin: 30px auto;
+      padding: 100px 50px;
+    }
+    tr {
+      color: #fff;
+      th {
+        font-size: 16px;
+        @include media($pc) {
+          font-size: 26px;
+        }
+      }
+      td {
+        font-size: 15px;
+        @include media($pc) {
+          font-size: 34px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+footer {
+  padding: 30px 0;
+  background-color: #fff;
+  text-align: center;
+  @include media($pc) {
+    padding: 50px 0;
+  }
+  p {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 10px;
+    @include media($pc) {
+      font-size: 14px;
+    }
+  }
+}

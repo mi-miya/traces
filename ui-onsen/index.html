@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>trace ui-onsen</title>
+  <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div id="wrapper">
+  <canvas id="bg"></canvas>
+  <div class="top">
+    <div class="title">
+      <h1>Trace温泉</h1>
+      <p>Traceと湯を愛するイベント</p>
+    </div>
+    <div class="entry">
+      <a class="entry-btn otoko" href="#">男 <span>ENTRY</span></a>
+      <a class="entry-btn onna" href="#">女 <span>ENTRY</span></a>
+    </div>
+    <p class="top-arrow">↓</p>
+  </div>
+  <div class="what">
+    <h2>Trace大好き<br>Traceが一番</h2>
+    <p>
+      こちらのページは、株式会社カヤック様が制作された"網島温泉様向け"イベントページのトレースとなります。ページの背景が湯気によって曇っていくようなデザインが印象的な、美しいページとなっています。<br>http://ui.kayac.com/event/onsen2015/
+    </p>
+  </div>
+  <section class="speakers">
+    <h2>SPEAKERS</h2>
+    <ul class="speaker-list">
+      <li>
+        <div class="speaker-name">
+          <img src="https://placehold.jp/180x180.png" alt="speaker">
+          <div class="name">
+            <p>Designer</p>
+            <h3>志摩島 揣摩</h3>
+          </div>
+        </div>
+        <p class="speaker-profile">
+          こちらのサイトの背景は、実装自体はCanvasを使用した単純なものですが、背景をなぞったときに、なぞった後が少し滲んでいるような描画となっています。
+        </p>
+      </li>
+      <li>
+        <div class="speaker-name">
+          <img src="https://placehold.jp/180x180.png" alt="speaker">
+          <div class="name">
+            <p>Programmer</p>
+            <h3>志摩島 揣摩</h3>
+          </div>
+        </div>
+        <p class="speaker-profile">
+          これによって、ぼやけた窓をなぞったときのリアルな質感を表現しているのかな、と思います。実装は、canvasサイズを実際のpixel数よりも少なく描画させていると予想しますが、このページではそのままデバイスのpixel数で描画しています。
+        </p>
+      </li>
+    </ul>
+  </section>
+  <section class="program">
+    <h2>PROGRAM</h2>
+    <table>
+      <tr>
+        <th>受付&入浴</th>
+        <td>17:00 - 18:00</td>
+      </tr>
+      <tr>
+        <th>Traceトークショー</th>
+        <td>18:00 - 20:00</td>
+      </tr>
+      <tr>
+        <th>懇談会</th>
+        <td>20:00 - 21:00</td>
+      </tr>
+    </table>
+  </section>
+  <footer>
+    <p>Misato Miyahara</p>
+    <p>参考ページ：http://ui.kayac.com/event/onsen2015/</p>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+$pc: 768px;
+
+@mixin media($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+@mixin google-font() {
+  font-family: 'Kosugi Maru', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.pcOnly {
+  display: none;
+  @include media($pc) {
+    display: flex;
+  }
+}
+*::selection {
+  background: rgba(0, 119, 255, 0.15);
+}
