@@ -1,0 +1,30 @@
+$pc: 768px;
+$theme_color: #3AC21F;
+
+@mixin media($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+* {
+  margin: 0;
+  padding: 0
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.pcOnly {
+  display: none;
+  @include media($pc) {
+    display: inline-block;
+  }
+}
+.spOnly {
+  @include media($pc) {
+    display: none !important;
+  }
+}

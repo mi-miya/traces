@@ -1,0 +1,310 @@
+@import 'common.scss';
+.wrapper {
+  position: relative;
+}
+.scroll_links {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  position: fixed;
+    top: 50%;
+    right: 40px;
+  z-index: 1000;
+  a {
+    width: 30px;
+    height: 30px;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+    &:hover {
+      div {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    div {
+      display: inline-block;
+      position: relative;
+      width: 5px;
+      height: 5px;
+      border-radius: 50px;
+      border: 1px solid $theme_color;
+      transition: width 150ms, height 150ms;
+      pointer-events: none;
+      span {
+        display: inline-block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        background-color: $theme_color;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .selected {
+    div {
+      width: 24px !important;
+      height: 24px !important;
+    }
+  }
+}
+header {
+  width: 100%;
+  height: 95px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  position: fixed;
+    top: 0;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+  z-index: 1000;
+  background-color: #fff;
+  @include media($pc) {
+    padding: 0 60px;
+  }
+  .logo {
+    height: 55%;
+    display: inline-block;
+    img {
+      height: 100%;
+    }
+  }
+  .nav {
+    display: flex;
+      align-items: center;
+    a {
+      margin: 0 20px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 18px;
+      span {
+        font-size: 10px;
+        font-weight: normal;
+      }
+    }
+  }
+  .drawer {
+    width: 95px;
+    height: 95px;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+    span {
+      width: 100%;
+      height: 2px;
+      background-color: #222222;
+      display: block;
+      &:nth-child(2){
+        width: 80%;
+      }
+      &:nth-child(3){
+        width: 60%;
+      }
+    }
+  }
+}
+@keyframes bgZoom {
+  0% {transform: scale(1.0)}
+  100% {transform: scale(1.1)}
+}
+#top {
+  height: 100vh;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  background-position: 50% 50%;
+  overflow: hidden;
+  position: relative;
+  #svg_area {
+    width: 35vw;
+    height: 38vw;
+    margin: 0 auto;
+    z-index: 500;
+    svg {
+      path {
+        stroke-width: 0;
+        fill: rgb(172, 172, 172);
+      }
+    }
+  }
+  #svg_bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+      top: 0;
+      left: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: bgZoom 4.5s ease-out;
+    }
+  }
+}
+section {
+  margin: 0 auto 35px;
+  @include media($pc) {
+    width: 75%;
+    margin: 100px auto 35px;
+  } 
+  .section_top_image {
+    width: 100%;
+    height: 242px;
+    object-fit: cover;
+    @include media($pc) {
+      height: auto;
+    }
+  }
+  .section_main {
+    width: 80%;
+    margin: 0 auto;
+    @include media($pc) {
+      width: 92%;
+      position: relative;
+    }
+    h2 {
+      margin: -40px 0 20px;
+      font-size: 15px;
+      color: $theme_color;
+      line-height: 25px;
+      @include media($pc) {
+        margin: -55px 0 20px;
+        line-height: 32px;
+      }
+      span {
+        font-size: 32px;
+        letter-spacing: 5px;
+        @include media($pc) {
+          font-size: 50px;
+        }
+      }
+    }
+    .section_text {
+      @include media($pc) {
+        width: 50%;
+      }
+    }
+    .section_btn {
+      width: 95%;
+      margin: 50px auto 0;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      background-color: $theme_color;
+      display: inline-block;
+      @include media($pc) {
+        width: 240px;
+        height: 120px;
+        line-height: 120px;
+        padding: 0;
+        position: absolute;
+          top: -60px;
+          right: 0;
+      }
+    }
+  }
+}
+#about {
+  .about_text1 {
+    margin: 0 0 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #424242;
+    @include media($pc) {
+      font-size: 18px;
+    }
+  }
+  .about_text2 {
+    font-size: 17px;
+    @include media($pc) {
+      font-size: 15px;
+      padding-right: 30px;
+    }
+  }
+}
+#service {
+  .service_text {
+    font-size: 17px;
+    @include media($pc) {
+      margin-bottom: 50px;
+      font-size: 14px;
+    }
+  }
+  .service_contents {
+    @include media($pc) {
+      display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .service_content {
+      @include media($pc) {
+        width: 31%;
+      }
+      img {
+        width: 100%;
+        @include media($pc) {
+          margin-bottom: 20px;
+        }
+      }
+      a {
+        font-size: 22px;
+        font-weight: bold;
+        color: #525252;
+        @include media($pc) {
+          font-size: 16px;
+        }
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-image: url('../images/link.png');
+          background-size: contain;
+          background-position: 50% 50%;
+          @include media($pc) {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+#recruit {
+  .recruit_text1 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: $theme_color;
+    @include media($pc) {
+      margin: 0 0 30px;
+      font-size: 30px;
+    }
+  }
+  .recruit_text2 {
+    font-size: 16px;
+    @include media($pc) {
+      width: 50%;
+      font-size: 14px;
+    }
+  }
+}
+footer {
+  margin: 20px 0 0;
+  padding: 30px 0;
+  height: 70px;
+  text-align: center;
+  border-top: 1px solid rgb(226, 226, 226);
+}

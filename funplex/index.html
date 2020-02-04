@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>trace funplex</title>
+  <link rel="stylesheet" href="style/style.min.css">
+  <script src="javascripts/raphael.min.js"></script>
+  <script src="javascripts/text.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="scroll_links pcOnly">
+    <a class="arc selected" onclick="clickLinks('top');"><div><span></span></div></a>
+    <a class="arc" onclick="clickLinks('about');"><div><span></span></div class="arc"></a>
+    <a class="arc" onclick="clickLinks('service');"><div><span></span></div class="arc"></a>
+    <a class="arc" onclick="clickLinks('recruit');"><div><span></span></div class="arc"></a>
+  </div>
+  <header>
+    <a class="logo" href="#">
+      <img src="https://placehold.jp/130x35.png" alt="logo">
+    </a>
+    <div class="pcOnly nav">
+      <a href="#">ABOUT<br><span>会社概要</span></a>
+      <a href="#">SERVICE<br><span>事業内容</span></a>
+      <a href="#">TOPICS<br><span>トピックス</span></a>
+      <a href="#">RECRUIT<br><span>採用情報</span></a>
+      <a href="#">FOR BUSINESS<br><span>法人のお客様</span></a>
+    </div>
+    <a class="spOnly drawer" href="#">
+      <span></span><span></span><span></span>
+    </a>
+  </header>
+  <div id="top">
+    <div id="svg_area"></div>
+    <div id="svg_bg"></div>
+  </div>
+  <section id="about">
+    <img class="section_top_image" src="https://placehold.jp/870x320.png" alt="about">
+    <div class="section_main">
+      <h2>会社概要<br><span>ABOUT</span></h2>
+      <div class="section_text">
+        <p class="about_text1">このページは、ファンプレックス株式会社 様のホームページデザインを参考に作成されています。</p>
+        <p class="about_text2">
+          トップの"GAME"が動的に動く箇所が印象的で、全体的にとてもシンプルなページとなっています。<br>
+          また、TOPICS表示の小さなウィンドウや画面右のスクロールボタンなど、ワンポイントなオシャレが散りばめられていると思います。
+        </p>
+      </div>
+      <a class="section_btn" href="#">MORE</a>
+    </div>
+  </section>
+  <section id="service">
+    <img class="section_top_image" src="https://placehold.jp/870x320.png" alt="service">
+    <div class="section_main">
+      <h2>事業内容<br><span>SERVICE</span></h2>
+      <div class="section_text">
+        <p class="service_text">
+          テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。
+        </p>
+      </div>
+      <div class="service_contents">
+        <div class="service_content">
+          <img src="https://placehold.jp/300x180.png" alt="content1">
+          <a href="#">リリースコンテンツ1</a>
+        </div>
+        <div class="service_content">
+          <img src="https://placehold.jp/300x180.png" alt="content2">
+          <a href="#">リリースコンテンツ2</a>
+        </div>
+        <div class="service_content pcOnly">
+          <img src="https://placehold.jp/300x180.png" alt="content3">
+          <a href="#">リリースコンテンツ3</a>
+        </div>
+      </div>
+      <a class="section_btn" href="#">MORE</a>
+    </div>
+  </section>
+  <section id="recruit">
+    <img class="section_top_image" src="https://placehold.jp/870x320.png" alt="recruit">
+    <div class="section_main">
+      <h2>採用情報<br><span>RECRUIT</span></h2>
+      <p class="recruit_text1">CHANGE THE LIFE</p>
+      <p class="recruit_text2">文字列文字列文字列。文字列文字列文字列文字列。文字列文字列文字列。文字列文字列文字列。</p class="recruit_text2">
+      <a class="section_btn" href="#">MORE</a>
+    </div>
+  </section>
+  <footer>
+    <p>Misato Miyahara</p>
+    <p>参考元サイト:https://funplex.co.jp/</p>
+  </footer>
+</div>
+<script src="javascripts/script.js"></script>
+</body>
+</html>
