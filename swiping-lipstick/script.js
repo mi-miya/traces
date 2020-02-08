@@ -145,11 +145,16 @@ $(function() {
   }
 
   $('#onemore').on('click', function() {
-    window.location.reload(false);
+    scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    setInterval(() => {
+      window.location.reload(false);
+    }, 1000);
   })
 
   let mouseMoveEvent = function(event) {
-    // TODO:高速で動かすときに、インターバルを設ける 
     if(checkVlidPoint()){
       radius = Math.abs(tapStartX - event.offsetX);
       if(radius > _radius) {

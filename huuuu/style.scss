@@ -27,6 +27,7 @@ a {
 }
 .wrapper {
   background-color: #F1F1F1;
+  overflow: hidden;
   @include media($pc) {
     padding-top: 98px;
   }

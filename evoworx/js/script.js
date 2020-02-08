@@ -44,7 +44,7 @@ function transitionLeave2() {
   }
   let requestId = window.requestAnimationFrame(transitionLeave2);
   el.style.width = `${width}%`;
-  // TODO: HACK: css animation を使った方がスタイリッシュで自由が聞く
+  // TODO: HACK: css animation を使った方がスタイリッシュで自由が効く
   if(width <= 0) {
     window.cancelAnimationFrame(requestId);
   }

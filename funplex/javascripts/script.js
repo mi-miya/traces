@@ -8,7 +8,6 @@ let position = {
 
 window.onload = () => {
   let index = 0;
-  let svg_area = document.getElementById('svg_area');
   let svg_bg = document.getElementById('svg_bg');
   let r = Raphael("svg_area", "100%", "100%");
   position['top'] = document.getElementById('top');
@@ -16,7 +15,7 @@ window.onload = () => {
   position['service'] = document.getElementById('service');
   position['recruit'] = document.getElementById('recruit');
   selected = document.getElementsByClassName('selected')[0];
-  r.setViewBox(0, 0, svg_area.clientWidth / 16, svg_area.clientHeight / 16, false);
+  r.setViewBox(0, 0, 14, 28, false);
   let letter = r.path("M0,0L0,0z");
   letter.animate({path: game[index]});
   svg_bg.innerHTML= `<img style="animation: bgZoom 4.5s ease-out;" src="images/${index}.jpg">`;

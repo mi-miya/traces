@@ -34,14 +34,6 @@ header p {
   font-size: 10px;
 }
 
-.header-image {
-  height: 35.8vw;
-  background-image: url('header.png');
-  background-size: contain;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
 section.campaigns-description {
   max-width: 580px;
   margin: 0 auto;
