@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trace minimum-font</title>
+  <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .textArea {
+      margin-top: -85px;
+    }
+    .textArea > p {
+      text-align: center;
+      font-family: 'Kosugi Maru', sans-serif;
+      font-size: 10px;
+      transform: scale(0.4);
+      line-height: 20px;
+      color: #4e4e4e;
+    }
+    ul {
+      list-style: none;
+      margin-top: -90px;
+      display: flex;
+        justify-content: center;
+    }
+    li {
+      margin: 0 2px;
+    }
+    .sns {
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+    }
+    #twitter {
+      background-color: #1DA1F2;
+    }
+    #facebook {
+      background-color: #3B5998;
+    }
+    @media (max-width: 680px) {
+      .textArea {
+        margin-top: -130px;
+      }
+      .textArea > p {
+        transform: scale(0.2);
+      }
+      ul {
+        margin-top: -130px;
+      }
+      .sns {
+        width: 2px;
+        height: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v6.0"></script>
+<div class="wrapper">
+  <div class="textArea">
+    <p>
+      このページは、佐藤ねじさんのデザインされた<br>
+      『世界で最も小さなサイト』のトレースとなります。<br>
+      本当に驚くくらい単純なのに、とても面白いサイトです。<br>
+      現在は "株式会社ブルーパドル" を経営されている<br>
+      佐藤ねじさんですが、<br>
+      この方のデザインされている商品やサイトは、<br>
+      本当に面白くて大好きです。<br>
+      <br>
+      このサイトの面白さは、<br>
+      たった4pxの文字のサイトというのも勿論ですが、<br>
+      4pxの世界の住人という世界観が面白いですよね。<br>
+      <br>
+      『世界で最も小さなサイト』のURLは<br>
+      下記のURLよりご参照ください。<br>
+      http://s.nezihiko.com/
+    </p>
+  </div>
+  <ul>
+    <li><a id="twitter" class="sns" href="http://twitter.com/share?url=https://mi-miya.github.io/traces/minimum-font/&text=（世界で最も小さなサイトのトレースです。）"></a></li>
+    <li><a id="facebook" class="sns" href="http://www.facebook.com/share.php?s=100&p[url]=https://mi-miya.github.io/traces/minimum-font/"></a></li>
+  </ul>
+</div>
+</body>
+</html>
