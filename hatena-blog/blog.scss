@@ -1,0 +1,422 @@
+@import "application.scss";
+
+img {
+  vertical-align: bottom;
+}
+
+h1,
+h2,
+p,
+a {
+  font-family: "Nasu-Regular";
+}
+
+.blogBody {
+  width: 100%;
+  height: auto;
+  background-color: #ffee00;
+}
+
+.top {
+  width: 100%;
+  height: 50vw;
+  margin-top: 12vw;
+  background-image: url("images/blog0.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include mediaTB {
+    height: 250px;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 6vw;
+    @include mediaTB {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+  }
+  p {
+    font-size: 4vw;
+    @include mediaTB {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  height: 12vw;
+  padding: 0 2vw;
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  top: 0;
+  border-bottom: 1px solid #999999;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  @include mediaTB {
+    height: 40px;
+    position: static;
+  }
+
+  .logo {
+    width: auto;
+    height: 75%;
+    padding: 0;
+    @include mediaTB {
+      height: 90%;
+    }
+  }
+  .header_nav {
+    display: flex;
+    align-content: center;
+    li {
+      margin: 0 1vw;
+      &.tb_list {
+        display: none;
+      }
+      a {
+        img {
+          width: auto;
+          height: 9vw;
+          &.header_user_icon {
+            border-radius: 9vw;
+          }
+        }
+      }
+      @include mediaTB {
+        &.sp_list {
+          display: none;
+        }
+        &.tb_list {
+          display: block;
+          a {
+            color: #2b2b2b;
+            line-height: 30px;
+            img {
+              height: 30px;
+              border-radius: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main_content {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+  @include mediaTB {
+    background-color: #ffffff65;
+  }
+}
+
+.title {
+  text-align: center;
+  .date {
+    font-size: 4vw;
+    @include mediaTB {
+      font-size: 1.2rem;
+      color: #525252;
+    }
+  }
+  h1 {
+    font-size: 7vw;
+    @include mediaTB {
+      font-size: 2.5rem;
+    }
+  }
+  .genru {
+    padding-left: 4vw;
+    text-align: left;
+    font-size: 4vw;
+    @include mediaTB {
+      display: none;
+    }
+  }
+}
+
+.genru_nav {
+  display: none;
+  @include mediaTB {
+    margin-bottom: 30px;
+    display: flex;
+    align-content: center;
+    background-color: #535353;
+  }
+  li {
+    margin: 0 15px;
+    a {
+      font-size: 1.8rem;
+      line-height: 3.5rem;
+      color: #ffffff;
+      &:hover {
+        background-color: #2b2b2b;
+      }
+    }
+  }
+}
+
+ul.blogStyle {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+  .blog_index {
+    width: 90%;
+    margin: 0 auto;
+    padding: 4vw 0;
+    border: 2px;
+    border-radius: 3vw;
+    background-color: #e7e7e7;
+    @include mediaTB {
+      width: 70%;
+      padding: 15px 0;
+      border: double #555555 4px;
+      border-radius: 10px;
+    }
+    h2 {
+      padding-left: 4vw;
+      font-size: 6vw;
+      color: #000000;
+      @include mediaTB {
+        padding-left: 1.8rem;
+        font-size: 1.8rem;
+      }
+    }
+    .index_nav {
+      padding-left: 8vw;
+      @include mediaTB {
+        padding: 10px 0 0 40px;
+      }
+      li {
+        color: #313131;
+        font-size: 4vw;
+        @include mediaTB {
+          font-size: 1.6rem;
+        }
+        a {
+          color: #313131;
+        }
+      }
+    }
+  }
+  .blog_head {
+    width: 92%;
+    margin: 12vw auto 5vw;
+    @include mediaTB {
+      margin: 40px auto 30px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 7vw;
+      font-weight: bold;
+      border-bottom: 2px solid #b14f22;
+      @include mediaTB {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .blog_text {
+    width: 92%;
+    margin: 3vw auto 6vw;
+    @include mediaTB {
+      width: 95%;
+      margin: 20px auto 30px;
+    }
+    p {
+      font-size: 5.5vw;
+      @include mediaTB {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .right,
+  .left {
+    width: 85%;
+    margin: 3vw auto;
+    @include mediaTB {
+      margin: 0 auto;
+    }
+
+    .blog_main {
+      display: flex;
+
+      .blog_icon {
+        width: 24%;
+        @include mediaTB {
+          width: 15%;
+        }
+        img {
+          width: 15vw;
+          height: 15vw;
+          border-radius: 15vw;
+          @include mediaTB {
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+          }
+        }
+      }
+
+      .balloon {
+        width: 76%;
+        position: relative;
+        @include mediaTB {
+          width: 85%;
+          padding-top: 10px;
+        }
+        .flex_width {
+          margin-bottom: 3vw;
+          padding: 2.5vw;
+          display: inline-block;
+          background: #ffffff;
+          border-radius: 2vw;
+          @include mediaTB {
+            padding: 10px 14px;
+            border-radius: 8px;
+          }
+          p {
+            font-size: 4.4vw;
+            @include mediaTB {
+              font-size: 1.3rem;
+            }
+            .strong {
+              font-size: 6.8vw;
+              @include mediaTB {
+                font-size: 1.8rem;
+              }
+            }
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: -3vw;
+          top: 4vw;
+          display: block;
+          width: 0;
+          height: 0;
+          border-top: 1.8vw solid transparent;
+          border-right: 3.6vw solid #ffffff;
+          border-bottom: 1.8vw solid transparent;
+          @include mediaTB {
+            left: -14px;
+            top: 20px;
+            border-top: 10px solid transparent;
+            border-right: 20px solid #ffffff;
+            border-bottom: 10px solid transparent;
+          }
+        }
+      }
+    }
+    // 右寄せ配置
+    &.right {
+      text-align: right;
+      .blog_main {
+        flex-direction: row-reverse;
+        .balloon {
+          .flex_width {
+            text-align: left;
+          }
+          &::before {
+            content: "";
+            left: auto;
+            right: -3vw;
+            height: 0;
+            border-right: none;
+            border-left: 3.6vw solid #ffffff;
+            @include mediaTB {
+              right: -14px;
+              border-left: 20px solid #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+  .blog_image {
+    width: 86%;
+    margin: 0 auto 6vw;
+    padding: 2.5vw;
+    background-color: #ffffff;
+    border-radius: 2vw;
+    @include mediaTB {
+      width: 70%;
+      padding: 12px;
+      margin: 0 auto 25px;
+      border-radius: 10px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.links {
+  margin: 10vw 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  @include mediaTB {
+    margin: 20px 0;
+  }
+  .twitter-share-button {
+    margin-right: 4vw;
+  }
+}
+
+.otherStyle {
+  width: 90%;
+  margin: 0 auto;
+  h2 {
+    font-size: 6vw;
+    border-bottom: 1px solid #636363;
+    @include mediaTB {
+      font-size: 1.6rem;
+    }
+  }
+  ul {
+    li {
+      margin: 1.5vw 0;
+      .date {
+        display: none;
+        @include mediaTB {
+          display: inline;
+          font-size: 1rem;
+        }
+      }
+      a {
+        color: #306b9c;
+        font-size: 5.2vw;
+        @include mediaTB {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #ffffff;
+  p {
+    font-size: 2vw;
+    color: #444444;
+    text-align: center;
+    @include mediaTB {
+      font-size: 0.8rem;
+    }
+  }
+}

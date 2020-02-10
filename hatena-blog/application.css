@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Nasu-Regular";
+  src: font-url("Nasu-Regular-20141215.ttf") format("truetype");
+}
+
+/* 画面サイズ設定 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  min-width: 320px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
