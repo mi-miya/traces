@@ -1,18 +1,14 @@
-/*
- *= require_self
- */
-
 @font-face {
     font-family: 'mincho_Aozora';
-    src: font-url('AozoraMinchoRegular.ttf') format('truetype');
+    src: font-url('../fonts/AozoraMinchoRegular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'mgenplus';
-    src: font-url('mgenplus-1p-thin.ttf') format('truetype');
+    src: font-url('../fonts/mgenplus-1p-thin.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Nasu-Regular';
-    src: font-url('Nasu-Regular-20141215.ttf') format('truetype');
+    src: font-url('../fonts/Nasu-Regular-20141215.ttf') format('truetype');
 }
 
 /* 画面サイズ設定 */

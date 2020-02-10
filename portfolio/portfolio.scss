@@ -118,10 +118,10 @@ body {
 
       .greetingText {
         font-family: "mincho_ipam";
-        font-weight: 600;
+        font-weight: bold;
         margin: 40px 0 20px;
-        font-size: 2.3rem;
-        line-height: 3.5rem;
+        font-size: 1.6rem;
+        line-height: 3rem;
         @include mediaSP {
           margin: 0;
           padding: 16vw;
@@ -131,14 +131,14 @@ body {
         }
         .arittake {
           font-weight: bold;
-          font-size: 3rem;
+          font-size: 2.5rem;
           @include mediaSP {
             font-size: 6.5vw;
           }
         }
         .skills {
           color: #181818;
-          font-size: 2.2rem;
+          font-size: 1.6rem;
           padding-left: 0.3rem;
           @include mediaSP {
             font-size: 4vw;

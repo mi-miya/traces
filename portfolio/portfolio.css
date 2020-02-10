@@ -186,10 +186,10 @@ body {
 
 .greeting .greetingMain .greetingLeft .greetingText {
   font-family: "mincho_ipam";
-  font-weight: 600;
+  font-weight: bold;
   margin: 40px 0 20px;
-  font-size: 2.3rem;
-  line-height: 3.5rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
 }
 
 @media screen and (max-width: 640px) {
@@ -204,7 +204,7 @@ body {
 
 .greeting .greetingMain .greetingLeft .greetingText .arittake {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 @media screen and (max-width: 640px) {
@@ -215,7 +215,7 @@ body {
 
 .greeting .greetingMain .greetingLeft .greetingText .skills {
   color: #181818;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   padding-left: 0.3rem;
 }
 

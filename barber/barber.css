@@ -1,7 +1,12 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Nasu-Regular";
-  src: font-url("Nasu-Regular-20141215.ttf") format("truetype");
+  src: url("../fonts/Nasu-Regular-20141215.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "serif_Neuton";
+  src: url("../fonts/Neuton-Regular.ttf") format("ttf");
 }
 
 /* 画面サイズ設定 */
@@ -63,7 +68,7 @@ body {
 
 .header .logo {
   width: auto;
-  height: 50%;
+  height: 40%;
 }
 
 .header .menu_link {
@@ -93,11 +98,11 @@ body {
   }
   .header .header_nav li a {
     font-size: 1.4rem;
-    line-height: 1.4rem;
+    line-height: 1.2rem;
     color: #000000;
   }
   .header .header_nav li a span {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -163,12 +168,12 @@ body {
 
 .div_common {
   width: 100%;
-  margin: 0 auto 8vw;
+  margin: 0 auto 10vw;
 }
 
 @media screen and (min-width: 640px) {
   .div_common {
-    margin-bottom: 25px;
+    margin-bottom: 100px;
   }
 }
 
@@ -184,7 +189,7 @@ body {
 @media screen and (min-width: 640px) {
   .div_common h1 {
     margin-bottom: 10px;
-    font-size: 3.5rem;
+    font-size: 2.2rem;
     letter-spacing: 4px;
   }
 }
@@ -280,7 +285,7 @@ body {
 
 @media screen and (min-width: 640px) {
   .service .service_content h2 {
-    font-size: 2.6rem;
+    font-size: 2rem;
   }
 }
 
@@ -299,7 +304,7 @@ body {
 
 @media screen and (min-width: 640px) {
   .service .service_content ul li {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 }
 
@@ -328,7 +333,7 @@ body {
 
 .access .access_flex .google_map {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   position: relative;
   padding-bottom: 80%;
   height: 0;
@@ -357,7 +362,7 @@ body {
 @media screen and (min-width: 640px) {
   .access .access_flex table {
     width: 50%;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 

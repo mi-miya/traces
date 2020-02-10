@@ -72,7 +72,7 @@ a {
     height: 75%;
     padding: 0;
     @include mediaTB {
-      height: 90%;
+      height: 70%;
     }
   }
   .header_nav {
@@ -117,6 +117,7 @@ a {
   max-width: 640px;
   height: auto;
   margin: 0 auto;
+  padding: 40px 0;
   @include mediaTB {
     background-color: #ffffff65;
   }
@@ -158,12 +159,9 @@ a {
   li {
     margin: 0 15px;
     a {
-      font-size: 1.8rem;
-      line-height: 3.5rem;
+      font-size: 1.2rem;
+      line-height: 3.6rem;
       color: #ffffff;
-      &:hover {
-        background-color: #2b2b2b;
-      }
     }
   }
 }
@@ -204,7 +202,7 @@ ul.blogStyle {
         color: #313131;
         font-size: 4vw;
         @include mediaTB {
-          font-size: 1.6rem;
+          font-size: 1.4rem;
         }
         a {
           color: #313131;
