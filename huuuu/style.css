@@ -50,8 +50,21 @@ header {
   background-color: #fff;
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    justify-content: center;
+  }
+}
+
 header .logo {
   display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  header .logo {
+    position: absolute;
+    left: 2%;
+  }
 }
 
 header .nav {
@@ -65,9 +78,15 @@ header .nav li {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  header .nav li {
+    margin: 0 5vw;
+  }
+}
+
 header .nav li a {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 28px;
 }
 

@@ -8,6 +8,10 @@ let defaultAngle = 40; // 基準振れ角
 window.onload = () => {
   oldPos = window.scrollY;
   let shakes = Array.from(document.getElementsByClassName('shakes'));
+  let canvas = document.getElementById('contents_board');
+  let context = canvas.getContext('2d');
+  context.font = "20px serif";
+  context.fillText("Hello world", 10, 50);
   shakes.forEach((shake) => {
     scrolls.push(new Scroll(shake));
   });

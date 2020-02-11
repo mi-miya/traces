@@ -2,7 +2,7 @@
 body {
 	margin: 0;
 	padding: 0 0 10px;
-	background-color: #ebffec;
+	background-color: #f0f0f0;
 	min-width: 300px;
 }
 
@@ -124,7 +124,7 @@ h1 {
 	padding: 6px 10px;
 	font-size: 18px;
 	color: #777;
-	background-color: #a5fcab;
+	background-color: #cfcfcf;
 	border: none;
 }
 
@@ -155,7 +155,7 @@ h1 {
 }
 
 .newsGenre {
-	color: rgb(8, 141, 26);
+	color: #088d1a;
 }
 
 .newsRightBottom {
@@ -212,7 +212,7 @@ footer a {
 	.topicList,
 	.localNews {
 		border: solid 1px #ccc;
-		box-shadow: 1px 1px 1px #99af95;
+		box-shadow: 1px 1px 1px #a0a0a0;
 	}
 	a:hover {
 		transition: 0.4s;
@@ -223,12 +223,12 @@ footer a {
 	.topicList:hover,
 	.localNews:hover {
 		transition: 0.4s;
-		box-shadow: 3px 3px 3px #99af95;
+		box-shadow: 3px 3px 3px #a0a0a0;
 	}
 	/*  */
 	header {
 		height: 112px;
-		box-shadow: 0 8px 8px #99af95;
+		box-shadow: 0 2px 8px #cfcfcf;
 	}
 	.userIcon>img,
 	.userIcon>i {

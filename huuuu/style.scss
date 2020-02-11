@@ -44,8 +44,15 @@ header {
     top: 0;
   z-index: 1000;
   background-color: #fff;
+  @include media($pc) {
+    justify-content: center;
+  }
   .logo {
     display: inline-block;
+    @include media($pc) {
+      position: absolute;
+      left: 2%;
+    }
   }
   .nav {
     display: flex;
@@ -54,9 +61,12 @@ header {
     li {
       margin: 0 45px;
       text-align: center;
+      @include media($pc) {
+        margin: 0 5vw;
+      }
       a {
         font-weight: bold;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 28px;
         span {
           font-size: 16px;
