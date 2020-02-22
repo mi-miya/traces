@@ -41,5 +41,5 @@ window.onload = () => {
     if(!imgArray[idx]) {
       clearTimeout(repeat);
     }
-  }, 200);
+  }, 100);
 }
