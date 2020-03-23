@@ -278,7 +278,9 @@ footer a {
 	}
 	header>ul>li:first-child {
 		color: #48f;
-		border-bottom: #48f solid 1px;
+		border-width: 1px;
+		border-color: transparent transparent #48f;
+		border-style: solid;
 		box-sizing: content-box;
 	}
 	.wrapper {

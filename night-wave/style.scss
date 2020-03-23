@@ -23,24 +23,27 @@ a {
 
 .top {
   height: 342px;
-  padding: 50px 0 0;
+  padding: 70px 0 0;
   display: flex;
     justify-content: center;
   @include pc {
     height: 35vw;
+    padding: 50px 0 0;
     align-items: center;
   }
   .top_title {
     text-align: center;
     h1 {
-      margin: 0 0 20px;
-      font-size: 25px;
+      margin: 0 0 30px;
+      font-size: 32px;
       font-weight: normal;
       @include pc {
-        font-size: 44px;
+        margin: 0 0 60px;
+        font-size: 54px;
       }
     }
     p {
+      font-size: 22px;
       font-size: 10px;
       letter-spacing: 10px;
       @include pc {
@@ -55,8 +58,13 @@ a {
   max-width: 620px;
   margin: 0 auto;
   padding: 40px 0;
+  @include pc {
+    width: 620px;
+    padding: 130px 0 0;
+  }
   h2 {
-    font-size: 22px;
+    margin-bottom: 12px;
+    font-size: 24px;
     font-weight: normal;
     @include pc {
       font-size: 38px;
@@ -65,18 +73,45 @@ a {
   p {
     line-height: 24px;
     font-size: 14px;
+    @include pc {
+      margin-bottom: 24px;
+      line-height: 32px;
+      font-size: 18px;
+    }
     .underline {
       text-decoration: underline;
     }
+  }
+  .el_movieLink {
+    display: none;
+    position: relative;
+    margin: 0 auto 100px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
     @include pc {
-      line-height: 32px;
-      font-size: 18px;
+      display: block;
+      width: 275px;
+      height: 80px;
+      margin: 0 auto 100px;
+      padding-left: 50px;
+      border-radius: 28px;
+      box-sizing: border-box;
+      line-height: 80px;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translateY(-50%);
     }
   }
 }
 .event {
   .event_schedule {
-    max-width: 646px;
+    max-width: 570px;
     margin: 0 auto;
     display: flex;
       flex-direction: column;
@@ -101,7 +136,7 @@ a {
       text-align: center;
       @include pc {
         text-align: left;
-        padding-left: 20px;
+        padding: 20px 0 20px 70px;
       }
       .event_date {
         font-size: 24px;
@@ -113,6 +148,7 @@ a {
         margin: 10px 0;
         font-size: 20px;
         @include pc {
+          margin-bottom: 46px;
           font-size: 24px;
         }
       }
@@ -123,9 +159,66 @@ a {
         font-weight: bold;
         background-color: #0081B2;
         border-radius: 10px;
+        @include pc {
+          padding: 16px 90px;
+        }
         &:hover {
           background-color: #004059;
         }
+      }
+    }
+  }
+}
+.twitter {
+  padding: 40px 0;
+  background-image: url('./images/sea.jpg');
+  background-size: cover;
+  @include pc {
+    padding: 90px 0;
+  }
+  .twitter_list_wrapper {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-radius: 12px;
+    background-color: #292F33;
+    overflow: hidden;
+    box-sizing: border-box;
+    @include pc {
+      width: 620px;
+    }
+  }
+}
+.bl_bunka_wrapper {
+  position: relative;
+  height: 480px;
+  background-image: url('./images/sea2.jpg');
+  @include pc {
+    height: 700px;
+  }
+  .bl_bunka {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    @include pc {
+      width: 620px;
+    }
+    h2 {
+      margin-bottom: 18px;
+      font-size: 24px;
+      @include pc {
+        margin-bottom: 26px;
+        font-size: 30px;
+      }
+    }
+    p {
+      font-size: 14px;
+      line-height: 27px;
+      @include pc {
+        font-size: 16px;
+        line-height: 34px;
       }
     }
   }
