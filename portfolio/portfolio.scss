@@ -92,14 +92,18 @@ body {
       color: #131313;
       @include mediaSP {
         width: 100%;
+        display: -webkit-box;
         display: flex;
-        flex-flow: column nowrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-flow: column nowrap;
       }
 
       @include mediaTB {
         .yoko {
           width: 620px;
-          transform: rotate(-3deg);
+          -webkit-transform: rotate(-3deg);
+                  transform: rotate(-3deg);
         }
         .tate {
           display: none;
@@ -109,7 +113,8 @@ body {
         .tate {
           width: 16vw;
           margin: 0 auto;
-          transform: rotate(-3deg);
+          -webkit-transform: rotate(-3deg);
+                  transform: rotate(-3deg);
         }
         .yoko {
           display: none;
@@ -127,7 +132,9 @@ body {
           padding: 16vw;
           font-size: 5vw;
           line-height: 8vw;
-          writing-mode: vertical-rl;
+          -webkit-writing-mode: vertical-rl;
+              -ms-writing-mode: tb-rl;
+                  writing-mode: vertical-rl;
         }
         .arittake {
           font-weight: bold;
@@ -167,7 +174,8 @@ body {
       height: auto;
       top: 25%;
       right: 10%;
-      transform: rotate(12deg);
+      -webkit-transform: rotate(12deg);
+              transform: rotate(12deg);
       box-shadow: 0 16px 16px -10px #313131;
       @include mediaSP {
         width: 55vw;
@@ -210,6 +218,7 @@ body {
   }
   .content_list {
     list-style: none;
+    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
     align-content: center;

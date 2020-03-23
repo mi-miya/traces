@@ -34,14 +34,20 @@ body {
 .traces {
   width: 90%;
   margin: 0 auto;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
 }
 
 @media screen and (min-width: 700px) {
   .traces {
     width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
     flex-wrap: wrap;
   }

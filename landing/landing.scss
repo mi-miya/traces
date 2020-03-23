@@ -19,9 +19,12 @@ a {
 .header {
   width: 100%;
   height: $sp_header_height;
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
@@ -40,8 +43,10 @@ a {
     }
   }
   .header_nav {
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
     padding-right: 2vw;
     @include mediaTB {
       padding-right: 10px;
@@ -66,9 +71,12 @@ a {
   height: 80vh;
   box-sizing: border-box;
   text-align: center;
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   background-image: url("images/landing.jpg");
   background-size: cover;
   background-position: 50% 50%;
@@ -79,8 +87,10 @@ a {
     height: 100vh;
     max-height: 1000px;
     text-align: right;
-    align-items: flex-end;
-    justify-content: flex-end;
+    -webkit-box-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
     box-shadow: 0 4px 10px #868686;
   }
 
@@ -115,8 +125,10 @@ a {
     width: 95%;
     max-width: 1024px;
     margin: 100px auto;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
   }
   img {
     width: 100%;
@@ -152,11 +164,13 @@ a {
 .performance_list {
   max-width: 1024px;
   margin: 0 auto;
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
 	justify-content: space-around;
   @include mediaTB {
-		justify-content: center;
+		-webkit-box-pack: center;
+		        justify-content: center;
   }
   li {
     width: 40%;
@@ -194,9 +208,12 @@ a {
     @include mediaTB {
       margin: 0;
       width: 100%;
+      display: -webkit-box;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      -webkit-box-pack: center;
+              justify-content: center;
+      -webkit-box-align: start;
+              align-items: flex-start;
     }
     li {
       margin: 6vw 0 8vw;
@@ -239,10 +256,15 @@ a {
   }
 
   .perchase {
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     a {
       display: inline-block;
       padding: 2vw 6vw;
@@ -279,13 +301,20 @@ a {
   background-color: #d4d4d4;
   .footer_nav {
     padding: 4vw 0 6vw;
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     @include mediaTB {
       padding: 50px 0 60px;
-      flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
     }
     li {
       @include mediaTB {

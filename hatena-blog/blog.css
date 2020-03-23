@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Nasu-Regular";
-  src: font-url("Nasu-Regular-20141215.ttf") format("truetype");
+  src: font-url("../fonts/Nasu-Regular-20141215.ttf") format("truetype");
 }
 
 /* 画面サイズ設定 */
@@ -53,9 +53,14 @@ a {
   background-position: 50% 50%;
   background-size: cover;
   color: #ffffff;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
 }
 
@@ -93,11 +98,14 @@ a {
   padding: 0 2vw;
   box-sizing: border-box;
   position: fixed;
+  display: -webkit-box;
   display: flex;
   top: 0;
   border-bottom: 1px solid #999999;
   background-color: #ffffff;
+  -webkit-box-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
   align-items: center;
   z-index: 999;
 }
@@ -122,6 +130,7 @@ a {
 }
 
 .header .header_nav {
+  display: -webkit-box;
   display: flex;
   align-content: center;
 }
@@ -218,6 +227,7 @@ a {
 @media screen and (min-width: 640px) {
   .genru_nav {
     margin-bottom: 30px;
+    display: -webkit-box;
     display: flex;
     align-content: center;
     background-color: #535353;
@@ -357,6 +367,7 @@ ul.blogStyle .left {
 
 ul.blogStyle .right .blog_main,
 ul.blogStyle .left .blog_main {
+  display: -webkit-box;
   display: flex;
 }
 
@@ -475,6 +486,8 @@ ul.blogStyle .left.right {
 
 ul.blogStyle .right.right .blog_main,
 ul.blogStyle .left.right .blog_main {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
   flex-direction: row-reverse;
 }
 
@@ -525,8 +538,10 @@ ul.blogStyle .blog_image img {
 
 .links {
   margin: 10vw 0;
+  display: -webkit-box;
   display: flex;
   align-content: center;
+  -webkit-box-pack: center;
   justify-content: center;
 }
 

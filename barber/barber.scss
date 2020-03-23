@@ -20,9 +20,12 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.8);
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
   z-index: 998;
   @include mediaTB {
     height: 60px;
@@ -43,9 +46,11 @@ body {
     display: none;
     @include mediaTB {
       width: 75%;
+      display: -webkit-box;
       display: flex;
       justify-content: space-around;
-      align-items: center;
+      -webkit-box-align: center;
+              align-items: center;
       li {
         text-align: center;
         a {
@@ -142,8 +147,10 @@ body {
       .news_head {
         margin: 0 auto;
         max-width: 800px;
+        display: -webkit-box;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+                justify-content: center;
         color: #cecece;
         .news_date {
           width: 25%;
@@ -198,8 +205,10 @@ body {
       color: #cecece;
       li {
         width: 100%;
+        display: -webkit-box;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+                justify-content: space-between;
         font-size: 4vw;
         @include mediaTB {
           font-size: 2rem;
@@ -217,10 +226,15 @@ body {
   }
   .access_flex {
     width: 100%;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     @include mediaTB {
-      flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
     }
     .google_map {
       width: 100%;

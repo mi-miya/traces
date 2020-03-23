@@ -19,6 +19,7 @@
   position: fixed;
   top: 0;
   z-index: -1;
+  -webkit-transition: background-image 0.7s;
   transition: background-image 0.7s;
 }
 
@@ -26,7 +27,10 @@
   text-align: center;
   .title {
     @include google-font();
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     h1 {
       font-size: 65px;
       font-weight: lighter;
@@ -78,7 +82,10 @@
   .top-arrow {
     margin: 20px 0;
     font-size: 30px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     @include media($pc) {
       margin: 60px 0;
       font-size: 60px;
@@ -96,7 +103,10 @@
     font-weight: normal;
     text-align: center;
     letter-spacing: 5px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     @include google-font();
     @include media($pc) {
       margin-bottom: 20px;
@@ -121,7 +131,10 @@ section {
     max-width: 600px;
   }
   h2 {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     font-size: 20px;
     font-style: italic;
     text-decoration: underline;
@@ -142,9 +155,12 @@ section {
       }
       .speaker-name {
         margin-bottom: 14px;
+        display: -webkit-box;
         display: flex;
-          justify-content: flex-start;
-          align-items: center;
+          -webkit-box-pack: start;
+                  justify-content: flex-start;
+          -webkit-box-align: center;
+                  align-items: center;
         @include media($pc) {
           margin-bottom: 24px;
         }
@@ -190,7 +206,10 @@ section {
   }
 }
 .program {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   table {
     margin: 15px auto;
     padding: 40px 30px;

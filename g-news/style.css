@@ -31,9 +31,12 @@ header {
 }
 
 .userIcon {
+	display: -webkit-box;
 	display: flex;
-	align-items: center;
-	justify-content: flex-end;
+	-webkit-box-align: center;
+	        align-items: center;
+	-webkit-box-pack: end;
+	        justify-content: flex-end;
 }
 
 .userIcon img {
@@ -53,8 +56,10 @@ header {
 
 nav {
 	padding: 7px 10px 0;
+	display: -webkit-box;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
 	align-content: center;
 }
 
@@ -129,6 +134,7 @@ h1 {
 }
 
 .content {
+	display: -webkit-box;
 	display: flex;
 }
 
@@ -140,7 +146,8 @@ h1 {
 .newsLeft>img {
 	width: 70px;
 	height: 70px;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
 
 .newsTitle {
@@ -215,6 +222,7 @@ footer a {
 		box-shadow: 1px 1px 1px #a0a0a0;
 	}
 	a:hover {
+		-webkit-transition: 0.4s;
 		transition: 0.4s;
 		color: #4060f0;
 		text-decoration: underline;
@@ -222,6 +230,7 @@ footer a {
 	.newsList>li:hover,
 	.topicList:hover,
 	.localNews:hover {
+		-webkit-transition: 0.4s;
 		transition: 0.4s;
 		box-shadow: 3px 3px 3px #a0a0a0;
 	}
@@ -239,10 +248,12 @@ footer a {
 	}
 	nav {
 		padding: 8px 20px 8px 8px;
+		display: -webkit-box;
 		display: flex;
 	}
 	nav>a {
-		flex: 2;
+		-webkit-box-flex: 2;
+		        flex: 2;
 		text-align: center;
 	}
 	nav img {
@@ -250,7 +261,8 @@ footer a {
 		margin-top: 6px;
 	}
 	nav>input {
-		flex: 4;
+		-webkit-box-flex: 4;
+		        flex: 4;
 		border: none;
 		font-size: 24px;
 		background-color: #eee;
@@ -259,16 +271,20 @@ footer a {
 	}
 	nav>div {
 		padding-right: 20px;
-		flex: 2;
+		-webkit-box-flex: 2;
+		        flex: 2;
 		text-align: right;
 	}
 	header>ul {
 		height: 48px;
 		margin: 0;
 		font-size: 15px;
+		display: -webkit-box;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		-webkit-box-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		        align-items: center;
 	}
 	header>ul>li {
 		padding: 12.3px 22px;
@@ -299,12 +315,14 @@ footer a {
 	}
 	.scrollColumn {
 		padding: 0 2vw;
+		display: -webkit-box;
 		display: flex;
 	}
 	.mainColumn {
 		margin-right: 18px;
 		padding: 0;
-		flex: 5;
+		-webkit-box-flex: 5;
+		        flex: 5;
 	}
 	.newsList {
 		margin: 0;
@@ -330,7 +348,8 @@ footer a {
 		width: 130px;
 		height: auto;
 		max-height: 130px;
-		object-fit: cover;
+		-o-object-fit: cover;
+		   object-fit: cover;
 	}
 	.newsRightTop {
 		margin-bottom: 10px;
@@ -362,7 +381,8 @@ footer a {
 	}
 	.rightColumn {
 		display: block;
-		flex: 2;
+		-webkit-box-flex: 2;
+		        flex: 2;
 	}
 	.topicList {
 		margin: 0;
@@ -453,6 +473,7 @@ footer a {
 			color: #444;
 			text-decoration: none;
 			display: block;
+			-webkit-transition: 0s;
 			transition: 0s;
 		}
 		.selectList>li>a:hover,

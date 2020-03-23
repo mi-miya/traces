@@ -51,6 +51,7 @@ a {
   border-style: solid;
   border-color: #b4b4b4;
   opacity: 0;
+  -webkit-transition: 1s;
   transition: 1s;
   li {
     vertical-align: bottom;
@@ -72,17 +73,22 @@ a {
   padding: 0 2vw;
   box-sizing: border-box;
   position: fixed;
+  display: -webkit-box;
   display: flex;
   top: 0;
   background-color: #ffffff;
   border-bottom: 1px solid rgb(255, 72, 0);
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
   @include mediaTB {
     height: auto;
     padding: 0;
     position: static;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
   }
 
   .logo {
@@ -112,6 +118,7 @@ a {
       border-radius: 1vw;
       display: inline-block;
       box-sizing: border-box;
+      -webkit-transition: all 0.2s;
       transition: all 0.2s;
     }
     &.menu_off {
@@ -128,14 +135,16 @@ a {
 
     &.menu_on {
       .top {
-        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
         top: 3.5vw;
       }
       .middle {
         display: none;
       }
       .bottom {
-        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
         bottom: 3.5vw;
       }
     }
@@ -147,9 +156,11 @@ a {
     left: 0;
     width: 100vw;
     background-color: rgba(255, 255, 255, 0.9);
+    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
+    -webkit-transition: max-height 0.2s;
     transition: max-height 0.2s;
     @include mediaTB {
       width: 100%;
@@ -159,7 +170,8 @@ a {
       flex-wrap: nowrap;
       background-color: transparent;
       justify-content: space-around;
-      align-items: center;
+      -webkit-box-align: center;
+              align-items: center;
     }
 
     &.display_off {
@@ -219,9 +231,12 @@ a {
     font-family: "mgenplus";
     height: 8.2vw;
     padding: 0 2vw;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+            align-items: flex-end;
     @include mediaTB {
       height: auto;
       padding: 0 16px;
@@ -250,12 +265,15 @@ a {
 
     li {
       padding: 1vw;
+      display: -webkit-box;
       display: flex;
       border-bottom: dashed 1px black;
-      align-items: center;
+      -webkit-box-align: center;
+              align-items: center;
       @include mediaTB {
         padding: 5px 0;
-        align-items: flex-start;
+        -webkit-box-align: start;
+                align-items: flex-start;
       }
 
       &:last-child {
@@ -284,8 +302,10 @@ a {
       }
       .time_genru {
         @include mediaTB {
+          display: -webkit-box;
           display: flex;
-          justify-content: center;
+          -webkit-box-pack: center;
+                  justify-content: center;
           .data,
           .time,
           .genru {
@@ -319,12 +339,15 @@ a {
   .disco_main {
     border-top: 1px solid rgb(255, 72, 0);
     @include mediaTB {
+      display: -webkit-box;
       display: flex;
     }
 
     li {
       width: 100%;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
       @include mediaTB {
         width: 25%;
         padding: 5px;
@@ -357,9 +380,12 @@ a {
   .blog_head {
     font-family: "mgenplus";
     padding: 0 5vw;
+    display: -webkit-box;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+            align-items: flex-end;
     @include mediaTB {
       padding: 0 20px;
     }
@@ -402,12 +428,14 @@ a {
     @include mediaTB {
       padding: 10px;
       border-radius: 10px;
+      display: -webkit-box;
       display: flex;
     }
 
     li {
       font-family: "ipaexg";
       padding: 1vw;
+      display: -webkit-box;
       display: flex;
       border-bottom: dashed 1px black;
       @include mediaTB {
@@ -423,8 +451,10 @@ a {
 
       .blog_left {
         width: 30%;
+        display: -webkit-box;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+                align-items: center;
         @include mediaTB {
           width: 100%;
           height: 60%;
@@ -469,6 +499,7 @@ a {
     max-width: 1024px;
     margin: 0 auto;
     padding: 1vw 0;
+    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
     @include mediaTB {

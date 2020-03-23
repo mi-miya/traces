@@ -14,16 +14,21 @@ header {
     height: 100px;
     position: fixed;
       top: 0;
+    display: -webkit-box;
     display: flex;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
     z-index: 1000;
   }
   .header-logo {
     height: 60px;
     width: 100%;
+    display: -webkit-box;
     display: flex;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+              align-items: center;
     background-color: #fff;
     z-index: 1000;
     position: fixed;
@@ -34,7 +39,8 @@ header {
       padding-left: 20px;
       position: static;
       z-index: 0;
-      justify-content: flex-start;
+      -webkit-box-pack: start;
+              justify-content: flex-start;
     }
     a {
       img {
@@ -53,6 +59,7 @@ header {
       img {
         width: 90%;
         height: 90%;
+        -webkit-transition: 150ms;
         transition: 150ms;
       }
     }
@@ -62,12 +69,15 @@ header {
     height: 65px;
     position: fixed;
       top: -7px;
+    display: -webkit-box;
     display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+              align-items: center;
     border-top: 1px solid $header_border_color;
     border-bottom: 1px solid $header_border_color;
     background-color: #fff;
     z-index: 999;
+    -webkit-transition: 150ms;
     transition: 150ms;
     @include media($pc) {
       width: auto;
@@ -91,10 +101,15 @@ header {
       a {
         width: 100%;
         height: 100%;
+        display: -webkit-box;
         display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+                  flex-direction: column;
+          -webkit-box-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+                  align-items: center;
         img {
           width: 22px;
           vertical-align: bottom;
@@ -125,7 +140,9 @@ header {
     position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    -webkit-transition: opacity 1s;
     transition: opacity 1s;
     &:nth-child(2) {
       opacity: 0;
@@ -182,9 +199,12 @@ main {
     }
   }
   .vision-ul {
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     border-radius: 2px;
     li {
       width: 20%;
@@ -241,6 +261,7 @@ main {
     margin: 0 auto;
     @include media($pc) {
       padding: 0 15px;
+      display: -webkit-box;
       display: flex;
     }
     .taxi-content {
@@ -290,7 +311,7 @@ footer {
   }
   div {
     color: #fff;
-    a { 
+    a {
       color: #fff;
     }
   }

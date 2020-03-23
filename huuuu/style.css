@@ -18,11 +18,13 @@ a {
 
 @media screen and (min-width: 768px) {
   .pcOnly {
+    display: -webkit-box;
     display: flex;
   }
 }
 
 .shakes {
+  -webkit-transform-origin: 50% 0;
   transform-origin: 50% 0;
 }
 
@@ -41,8 +43,11 @@ header {
   width: 100%;
   height: 98px;
   padding-left: 40px;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -52,6 +57,7 @@ header {
 
 @media screen and (min-width: 768px) {
   header {
+    -webkit-box-pack: center;
     justify-content: center;
   }
 }
@@ -68,8 +74,11 @@ header .logo {
 }
 
 header .nav {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -101,8 +110,11 @@ header .nav li a span {
   background-image: url("https://placehold.jp/1000x800.png");
   background-position: 50% 50%;
   background-size: cover;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -171,7 +183,9 @@ main .news h2 span {
 
 @media screen and (min-width: 768px) {
   main .news ul {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: justify;
     justify-content: space-between;
   }
 }
@@ -180,6 +194,7 @@ main .news ul li {
   margin: 5px 0;
   padding: 10px 15px;
   background-color: #fff;
+  display: -webkit-box;
   display: flex;
 }
 
@@ -189,6 +204,8 @@ main .news ul li {
     height: 450px;
     padding: 20px;
     box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
   }
 }
@@ -210,6 +227,7 @@ main .news ul li .news-img {
 main .news ul li .news-img img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -253,8 +271,11 @@ main .news ul li .news-main .news-text p {
 footer {
   width: 100%;
   height: 200px;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 

@@ -25,10 +25,15 @@ a {
   background-position: 50% 50%;
   background-size: cover;
   color: #ffffff;
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   @include mediaTB {
     height: 250px;
     margin-top: 0;
@@ -55,12 +60,15 @@ a {
   padding: 0 2vw;
   box-sizing: border-box;
   position: fixed;
+  display: -webkit-box;
   display: flex;
   top: 0;
   border-bottom: 1px solid #999999;
   background-color: #ffffff;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
   z-index: 999;
   @include mediaTB {
     height: 40px;
@@ -76,6 +84,7 @@ a {
     }
   }
   .header_nav {
+    display: -webkit-box;
     display: flex;
     align-content: center;
     li {
@@ -152,6 +161,7 @@ a {
   display: none;
   @include mediaTB {
     margin-bottom: 30px;
+    display: -webkit-box;
     display: flex;
     align-content: center;
     background-color: #535353;
@@ -249,6 +259,7 @@ ul.blogStyle {
     }
 
     .blog_main {
+      display: -webkit-box;
       display: flex;
 
       .blog_icon {
@@ -323,7 +334,9 @@ ul.blogStyle {
     &.right {
       text-align: right;
       .blog_main {
-        flex-direction: row-reverse;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+                flex-direction: row-reverse;
         .balloon {
           .flex_width {
             text-align: left;
@@ -365,9 +378,11 @@ ul.blogStyle {
 
 .links {
   margin: 10vw 0;
+  display: -webkit-box;
   display: flex;
   align-content: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   @include mediaTB {
     margin: 20px 0;
   }

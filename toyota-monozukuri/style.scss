@@ -45,16 +45,23 @@ h1, h2, h3, p {
     .icon_line {
       width: 30px;
       height: 25px;
+      display: -webkit-box;
       display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+                justify-content: space-between;
       position: relative;
       @include media($pc) {
         width: 65px;
         height: 35px;
       }
       span {
+        -webkit-transition: -webkit-transform 120ms linear;
+        transition: -webkit-transform 120ms linear;
         transition: transform 120ms linear;
+        transition: transform 120ms linear, -webkit-transform 120ms linear;
         display: inline-block;
         width: 100%;
         height: 2px;
@@ -76,13 +83,15 @@ h1, h2, h3, p {
           width: 50px !important;
         }
         &:nth-child(1) {
-          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
         }
         &:nth-child(2) {
           width: 0% !important;
         }
         &:nth-child(3) {
-          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
         }
       }
     }
@@ -98,6 +107,7 @@ h1, h2, h3, p {
     padding: 10px 20px;
     box-sizing: border-box;
     background-color: $theme_color;
+    -webkit-transition: opacity 200ms;
     transition: opacity 200ms;
     opacity: 0;
     z-index: 999;
@@ -109,9 +119,13 @@ h1, h2, h3, p {
     div {
       padding: 40px 0 0;
       text-align: center;
+      display: -webkit-box;
       display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-align: center;
+                align-items: center;
       a {
         margin: 16px 0;
         display: inline-block;
@@ -131,6 +145,7 @@ h1, h2, h3, p {
     position: absolute;
     opacity: 0;
     z-index: -1000;
+    -webkit-transition: opacity 500ms;
     transition: opacity 500ms;
     @include media($pc) {
       width: 12%;
@@ -219,6 +234,7 @@ h1, h2, h3, p {
       height: 24vw;
       margin: 0 auto;
       a {
+        -webkit-transition: 200ms opacity;
         transition: 200ms opacity;
         @include media($pc) {
           display: inline-block;
@@ -229,7 +245,8 @@ h1, h2, h3, p {
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          -o-object-fit: cover;
+             object-fit: cover;
         }
         &:hover {
           opacity: 0.9;
@@ -247,16 +264,21 @@ h1, h2, h3, p {
   .links_wrapper {
     max-width: 710px;
     margin: 0 auto;
+    display: -webkit-box;
     display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      flex-direction: column;
+      -webkit-box-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
     .link {
       width: 88%;
       margin-bottom: 30px;
       box-sizing: border-box;
       position: relative;
       background-color: #fff;
+      -webkit-transition: box-shadow 150ms;
       transition: box-shadow 150ms;
       box-shadow : 0 0 0 5px transparent;
       border-radius: 20px;
@@ -272,9 +294,13 @@ h1, h2, h3, p {
         }
       }
       a {
+        display: -webkit-box;
         display: flex;
-          align-items: center;
-          flex-direction: column;
+          -webkit-box-align: center;
+                  align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+                  flex-direction: column;
         width: 100%;
         height: 100%;
         padding: 50px 65px 35px 35px;
@@ -283,7 +309,9 @@ h1, h2, h3, p {
         text-align: center;
         @include media($pc) {
           padding: 35px 80px 60px 40px;
-          flex-direction: row;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+                  flex-direction: row;
         }
         img {
           width: 70%;
@@ -295,10 +323,12 @@ h1, h2, h3, p {
           position: absolute;
             top: 20%;
             right: -4%;
-          transform: rotate(90deg);
+          -webkit-transform: rotate(90deg);
+                  transform: rotate(90deg);
           white-space: nowrap;
           font-size: 14px;
           color: #2826a8;
+          -webkit-transition: color 150ms;
           transition: color 150ms;
           @include media($pc) {
             top: 22%;
@@ -341,21 +371,32 @@ h1, h2, h3, p {
       }
     }
     .link_block {
+      display: -webkit-box;
       display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-align: center;
+                align-items: center;
       @include media($pc) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: stretch;
+                align-items: stretch;
         .link {
           width: 48.5%;
           padding: 40px;
           box-sizing: border-box;
           a {
-            flex-direction: column;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                    align-items: center;
             padding: 20px;
             img {
               width: 66%;
@@ -381,10 +422,15 @@ h1, h2, h3, p {
     padding: 150px 0 94px;
   }
   a {
+    display: -webkit-box;
     display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+              align-items: center;
     h2 {
       margin: 14px 0 40px;
       font-size: 19px;
@@ -451,11 +497,13 @@ footer {
     }
   }
   .footer_nav {
+    display: -webkit-box;
     display: flex;
       flex-wrap: wrap;
     @include media($large_pc) {
       padding: 30px;
-      justify-content: center;
+      -webkit-box-pack: center;
+              justify-content: center;
     }
     li {
       width: 50%;
@@ -497,19 +545,28 @@ footer {
   .footer_bottom {
     padding: 40px 0 80px;
     background-color: $theme_color;
+    display: -webkit-box;
     display: flex;
-      flex-direction: column-reverse;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+              flex-direction: column-reverse;
     @include media($large_pc) {
-      align-items: center;
-      flex-direction: row;
-      justify-content: space-between;
+      -webkit-box-align: center;
+              align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
     }
     .footer_links {
       margin: 0 0 25px;
       @include media($large_pc) {
         margin: 0;
+        display: -webkit-box;
         display: flex;
-          justify-content: flex-end;
+          -webkit-box-pack: end;
+                  justify-content: flex-end;
       }
       li {
         padding: 0 14px;

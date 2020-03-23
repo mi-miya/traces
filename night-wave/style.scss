@@ -18,18 +18,22 @@ a {
   text-decoration: none;
 }
 .coloring {
+  -webkit-transition: 600ms color linear;
   transition: 600ms color linear;
 }
 
 .top {
   height: 342px;
   padding: 70px 0 0;
+  display: -webkit-box;
   display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
   @include pc {
     height: 35vw;
     padding: 50px 0 0;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
   }
   .top_title {
     text-align: center;
@@ -105,7 +109,8 @@ a {
       position: absolute;
       top: 50%;
       left: 30%;
-      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
     }
   }
 }
@@ -113,14 +118,20 @@ a {
   .event_schedule {
     max-width: 570px;
     margin: 0 auto;
+    display: -webkit-box;
     display: flex;
-      flex-direction: column;
-      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-align: center;
+              align-items: center;
     padding: 30px 20px;
     border-top: 2px solid #0081B2;
     @include pc {
       padding: 30px;
-      flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
       border: none;
       border-left: 6px solid #0081B2;
     }
@@ -200,7 +211,8 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 90%;
     @include pc {
       width: 620px;
@@ -224,10 +236,15 @@ a {
   }
 }
 footer {
+  display: -webkit-box;
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
   height: 100px;
   p {
     font-size: 10px;

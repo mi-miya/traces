@@ -50,7 +50,9 @@ header {
     height: 100px;
     position: fixed;
     top: 0;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: justify;
     justify-content: space-between;
     z-index: 1000;
   }
@@ -59,8 +61,11 @@ header {
 header .header-logo {
   height: 60px;
   width: 100%;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
   background-color: #fff;
   z-index: 1000;
@@ -75,6 +80,7 @@ header .header-logo {
     padding-left: 20px;
     position: static;
     z-index: 0;
+    -webkit-box-pack: start;
     justify-content: flex-start;
   }
 }
@@ -100,6 +106,7 @@ header .header-logo .arrow {
 header .header-logo .arrow img {
   width: 90%;
   height: 90%;
+  -webkit-transition: 150ms;
   transition: 150ms;
 }
 
@@ -108,12 +115,15 @@ header .header-ul {
   height: 65px;
   position: fixed;
   top: -7px;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
   border-top: 1px solid #d4d4d4;
   border-bottom: 1px solid #d4d4d4;
   background-color: #fff;
   z-index: 999;
+  -webkit-transition: 150ms;
   transition: 150ms;
 }
 
@@ -148,9 +158,14 @@ header .header-ul li:nth-child(2) {
 header .header-ul li a {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -189,7 +204,9 @@ header .header-ul li a p {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transition: opacity 1s;
   transition: opacity 1s;
 }
 
@@ -264,8 +281,11 @@ main section .section-title h2 span {
 }
 
 .vision .vision-ul {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
   border-radius: 2px;
 }
@@ -342,6 +362,7 @@ main section .section-title h2 span {
 @media screen and (min-width: 768px) {
   .taxi .taxi-contents {
     padding: 0 15px;
+    display: -webkit-box;
     display: flex;
   }
 }
