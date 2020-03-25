@@ -168,7 +168,7 @@ h1, h2, h3, p {
 
 @media screen and (min-width: 768px) {
   #bg_dot .bg_image {
-    width: 12%;
+    width: 8%;
   }
 }
 
@@ -179,13 +179,13 @@ h1, h2, h3, p {
 
 @media screen and (min-width: 768px) {
   #bg_dot .top {
-    padding: 265px 0 224px;
+    padding: 360px 0 64px;
   }
 }
 
 @media screen and (min-width: 1240px) {
   #bg_dot .top {
-    padding: 265px 0 410px;
+    padding: 240px 0 430px;
   }
 }
 
@@ -237,7 +237,7 @@ h1, h2, h3, p {
 
 @media screen and (min-width: 768px) {
   #bg_dot .message {
-    padding: 0 0 150px;
+    padding: 0 0 156px;
   }
 }
 
@@ -251,7 +251,7 @@ h1, h2, h3, p {
   #bg_dot .message h2 {
     margin-bottom: 45px;
     font-size: 72px;
-    letter-spacing: 12px;
+    letter-spacing: 14px;
     margin: 0 0 50px;
   }
 }
@@ -292,11 +292,30 @@ h1, h2, h3, p {
   width: 55vw;
   height: 24vw;
   margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  #bg_dot .message .message_video {
+    width: 720px;
+    height: 300px;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #bg_dot .message .message_video {
+    width: 1050px;
+    height: 450px;
+  }
 }
 
 #bg_dot .message .message_video a {
   -webkit-transition: 200ms opacity;
   transition: 200ms opacity;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -656,7 +675,7 @@ footer .footer_nav li {
 
 @media screen and (min-width: 768px) {
   footer .footer_nav li {
-    padding: 56px 0;
+    padding: 46px 0;
   }
 }
 

@@ -148,17 +148,17 @@ h1, h2, h3, p {
     -webkit-transition: opacity 500ms;
     transition: opacity 500ms;
     @include media($pc) {
-      width: 12%;
+      width: 8%;
     }
   }
   .top {
     padding: 300px 0 130px;
     text-align: center;
     @include media($pc) {
-      padding: 265px 0 224px;
+      padding: 360px 0 64px;
     }
     @include media($large_pc) {
-      padding: 265px 0 410px;
+      padding: 240px 0 430px;
     }
     .top_title {
       margin-bottom: 40px;
@@ -195,7 +195,7 @@ h1, h2, h3, p {
     padding: 0 0 110px;
     text-align: center;
     @include media($pc) {
-      padding: 0 0 150px;
+      padding: 0 0 156px;
     }
     h2 {
       margin-bottom: 10vw;
@@ -204,7 +204,7 @@ h1, h2, h3, p {
       @include media($pc) {
         margin-bottom: 45px;
         font-size: 72px;
-        letter-spacing: 12px;
+        letter-spacing: 14px;
         margin: 0 0 50px;
       }
       @include media($large_pc) {
@@ -233,9 +233,22 @@ h1, h2, h3, p {
       width: 55vw;
       height: 24vw;
       margin: 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-sizing: border-box;
+      @include media($pc) {
+        width: 720px;
+        height: 300px;
+        padding: 10px;
+      }
+      @include media($pc) {
+        width: 1050px;
+        height: 450px;
+      }
       a {
         -webkit-transition: 200ms opacity;
         transition: 200ms opacity;
+        border-radius: 10px;
         @include media($pc) {
           display: inline-block;
           overflow: hidden;
@@ -511,7 +524,7 @@ footer {
       border: 1px solid $theme_color;
       box-sizing: border-box;
       @include media($pc) {
-        padding: 56px 0;
+        padding: 46px 0;
       }
       @include media($large_pc) {
         width: auto;
