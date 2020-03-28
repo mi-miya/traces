@@ -1,0 +1,45 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Kosugi', sans-serif;
+}
+
+.ly_wrapper {
+  position: relative;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  #modalImage {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.ly_cardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  .bl_cardList_card {
+    width: 18rem;
+    margin: 10px;
+    margin-bottom: 20px;
+    .bl_cardList_card_body {
+      .el_cardList_card_title {
+        font-size: 1.4rem;
+      }
+      .el_cardList_card_text {
+        font-size: 1rem;
+      }
+    }
+  }
+}

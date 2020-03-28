@@ -3,224 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Traces | Misato Miyahara</title>
-  <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|Quicksand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Trace 100 Web</title>
+  <link rel="stylesheet" href="index/stylesheets/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Kosugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index/stylesheets/index.css">
+  <script src="index/script.js"></script>
 </head>
 <body>
-<div class="wrapper">
-  <h1>Traces</h1>
-  <ul class="traces">
-    <li class="trace">
-      <a href="g-news">
-        <img src="screenshots/google-news.png" alt="google news">
-        <div class="trace_description">
-          <h2>Google news</h2>
-          <ul>
-            <li>3カラムレイアウト</li>
-            <li>SP/Tablet/PC 対応</li>
-          </ul>
+  <div class="ly_wrapper">
+    <h1>Trace 100 Web sites.</h1>
+    <ul class="ly_cardList">
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="https://placehold.jp/250x150.png" alt="Asur">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">Asur</h2>
+          <p class="card-text el_cardList_card_text">
+            Adobe XD
+          </p>
+          <button type="button" id="asur" class="btn btn-success">PNG</button>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="night-wave">
-        <img src="screenshots/night-wave.png" alt="night-wave">
-        <div class="trace_description">
-          <h2>Night Wave</h2>
-          <ul>
-            <li>Web Audio APIによる音声再生</li>
-            <li>再生音量毎のフォントカラー更新</li>
-            <li>Sass</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/night-wave.png" alt="Night Wave">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">Night Wave</h2>
+          <p class="card-text el_cardList_card_text">
+            Web Audio APIによる音声再生 / 再生音量毎のフォントカラー更新 / Sass
+          </p>
+          <a href="night-wave/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="evoworx">
-        <img src="screenshots/evoworx.png" alt="evoworx">
-        <div class="trace_description">
-          <h2>Evoworx</h2>
-          <ul>
-            <li>SP/PC 対応</li>
-            <li>スライダー: Swiper.js</li>
-            <li>非同期画面遷移: Barba.js</li>
-            <li>Sass</li>
-            <li>カスタムポインター</li>
-            <li>マウスストーカー</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/night-wave.png" alt="UI温泉">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">UI温泉</h2>
+          <p class="card-text el_cardList_card_text">
+            スクロールによる背景画像変更 / 背景のくもり効果 / Sass
+          </p>
+          <a href="ui-onsen/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="ui-onsen">
-        <img src="screenshots/ui-onsen.png" alt="ui-onsen">
-        <div class="trace_description">
-          <h2>UI Onsen</h2>
-          <ul>
-            <li>スクロールによる背景画像変更</li>
-            <li>背景のくもり効果</li>
-            <li>Sass</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/evoworx.png" alt="Evoworx">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">Evoworx</h2>
+          <p class="card-text el_cardList_card_text">
+            SP/PC 対応 / Swiper.js / Barba.js / Sass / カスタムポインター / マウスストーカー
+          </p>
+          <a href="evoworx/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="hacker-typer">
-        <img src="screenshots/hacker-typer.png" alt="hacker-typer">
-        <div class="trace_description">
-          <h2>Hacker Typer</h2>
-          <ul>
-            <li>PCのみ対応</li>
-            <li>タイピングによる文字の自動出力</li>
-            <li>jQuery</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/hacker-typer.png" alt="Hacker Typer">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">Hacker Typer</h2>
+          <p class="card-text el_cardList_card_text">
+            PCのみ対応 / タイピングによる文字の自動出力 / jQuery
+          </p>
+          <a href="hacker-typer/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="toyota-monozukuri">
-        <img src="screenshots/toyota-monozukuri.png" alt="toyota-monozukuri">
-        <div class="trace_description">
-          <h2>Toyota Monozukuri</h2>
-          <ul>
-            <li>SP/PC 対応</li>
-            <li>Sass</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/toyota-monozukuri.png" alt="Toyotaものづくり">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">Toyotaものづくり</h2>
+          <p class="card-text el_cardList_card_text">
+            SP/PC 対応 / Sass
+          </p>
+          <a href="toyota-monozukuri/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="funplex">
-        <img src="screenshots/funplex.png" alt="funplex">
-        <div class="trace_description">
-          <h2>Funplex</h2>
-          <ul>
-            <li>SP/PC 対応</li>
-            <li>SVG操作: Raphael.js</li>
-            <li>InkScapeによる文字のSVG化</li>
-            <li>Sass</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/funplex.png" alt="Funplex">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">Funplex</h2>
+          <p class="card-text el_cardList_card_text">
+            SP/PC 対応 / Raphael.js / InkScapeによる文字のSVG化 / Sass
+          </p>
+          <a href="funplex/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="gojyo-taxi">
-        <img src="screenshots/gojyo-taxi.png" alt="gojyo-taxi">
-        <div class="trace_description">
-          <h2>Gojyo Taxi</h2>
-          <ul>
-            <li>SP/PC 対応</li>
-            <li>文字のかすれ効果</li>
-            <li>Sass</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/gojyo-taxi.png" alt="互助タクシー">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">互助タクシー</h2>
+          <p class="card-text el_cardList_card_text">
+            SP/PC 対応 / 文字のかすれ効果 / Sass
+          </p>
+          <a href="gojyo-taxi/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="huuuu">
-        <img src="screenshots/huuuu.png" alt="huuuu">
-        <div class="trace_description">
-          <h2>Huuuu</h2>
-          <ul>
-            <li>スクロールによる文字の揺れ効果</li>
-            <li>Sass</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/minimum-font.png" alt="世界で一番小さなサイト">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">世界で一番小さなサイト</h2>
+          <p class="card-text el_cardList_card_text">
+            SP/PC 対応
+          </p>
+          <a href="minimum-font/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="minimum-font">
-        <img src="screenshots/minimum-font.png" alt="toyota-monozukuri">
-        <div class="trace_description">
-          <h2>Mimum Font</h2>
-          <ul>
-            <li>SP/PC 対応</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/huuuu.png" alt="Huuuu">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">Huuuu</h2>
+          <p class="card-text el_cardList_card_text">
+            スクロールによる文字の揺れ効果 / Sass
+          </p>
+          <a href="huuuu/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="hatena-blog">
-        <img src="screenshots/hatena-blog.png" alt="hatena-blog">
-        <div class="trace_description">
-          <h2>Hatena Blog</h2>
-          <ul>
-            <li>SP/Tablet/PC 対応</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/shisedo.png" alt="資生堂イベント">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">資生堂イベント</h2>
+          <p class="card-text el_cardList_card_text">
+            PCのみ対応 / canvasによる画像の書き換え / jQuery / Google Fonts
+          </p>
+          <a href="swiping-lipstick/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="swiping-lipstick">
-        <img src="screenshots/shisedo.png" alt="swiping-lipstick">
-        <div class="trace_description">
-          <h2>Shisedo</h2>
-          <ul>
-            <li>PCのみ対応</li>
-            <li>canvasによる画像の書き換え</li>
-            <li>jQuery</li>
-            <li>Google Fonts</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/portfolio.png" alt="Portfolio">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">Portfolio</h2>
+          <p class="card-text el_cardList_card_text">
+            SP/Tablet/PC 対応 / jQuery / Google Fonts
+          </p>
+          <a href="portfolio/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="portfolio">
-        <img src="screenshots/portfolio.png" alt="portfolio">
-        <div class="trace_description">
-          <h2>Portfolio Design</h2>
-          <ul>
-            <li>SP/Tablet/PC 対応</li>
-            <li>jQuery</li>
-            <li>Sass</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/barber.png" alt="barber">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">barber</h2>
+          <p class="card-text el_cardList_card_text">
+            SP/Tablet/PC 対応 / jQuery / Google Map 表示 / Sass
+          </p>
+          <a href="barber/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="barber">
-        <img src="screenshots/barber.png" alt="barber">
-        <div class="trace_description">
-          <h2>Barbar Design</h2>
-          <ul>
-            <li>SP/Tablet/PC 対応</li>
-            <li>jQuery</li>
-            <li>Sass</li>
-            <li>Google Map 表示</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/idol.png" alt="Idol">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">Idol</h2>
+          <p class="card-text el_cardList_card_text">
+            SP/Tablet/PC 対応 / jQuery / Sass
+          </p>
+          <a href="idol/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="idol">
-        <img src="screenshots/idol.png" alt="idol">
-        <div class="trace_description">
-          <h2>Idol Design</h2>
-          <ul>
-            <li>SP/Tablet/PC 対応</li>
-            <li>jQuery</li>
-            <li>Sass</li>
-            <li>Google Map 表示</li>
-          </ul>
+      </li>
+      <li class="card bl_cardList_card">
+        <img class="card-img-top" src="index/screenshots/landing.png" alt="Landing">
+        <div class="card-body bl_cardList_card_body">
+          <h2 class="card-title el_cardList_card_title">Landing</h2>
+          <p class="card-text el_cardList_card_text">
+            SP/Tablet/PC 対応 / jQuery / Sass
+          </p>
+          <a href="landing/" class="btn btn-primary">HTML</a>
         </div>
-      </a>
-    </li>
-    <li class="trace">
-      <a href="landing">
-        <img src="screenshots/landing.png" alt="landing">
-        <div class="trace_description">
-          <h2>Landing Design</h2>
-          <ul>
-            <li>SP/Tablet/PC 対応</li>
-            <li>jQuery</li>
-            <li>Sass</li>
-          </ul>
-        </div>
-      </a>
-    </li>
-  </ul>
-</div>
+      </li>
+    </ul>
+    <div class="modal fade" id="modal" tabindex="-1">
+      <div class="modal-dialog" id="modalImage"></div>
+    </div>
+  </div>
 </body>
 </html>
